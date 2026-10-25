@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Las Flores Software — Sitios, tiendas y sistemas para tu negocio</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌼</text></svg>" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
   <meta name="description" content="Sitios web, tiendas online y sistemas a medida (reservas, turnos, entradas) para negocios de Las Flores, Buenos Aires. Pago único o mensual, hosting gratis para siempre." />
   <meta name="author" content="Julian Carroccio" />
@@ -14,11 +16,13 @@
   <meta property="og:url" content="https://lasflores.software" />
   <meta property="og:title" content="Las Flores Software — Sitios, tiendas y sistemas para tu negocio" />
   <meta property="og:description" content="Sitios web, tiendas online y sistemas a medida para negocios de Las Flores. Pago único o mensual, hosting gratis para siempre." />
+  <meta property="og:image" content="https://lasflores.software/assets/favicon-512.png" />
   <meta property="og:locale" content="es_AR" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Las Flores Software" />
   <meta name="twitter:description" content="Sitios web, tiendas online y sistemas a medida para negocios de Las Flores." />
+  <meta name="twitter:image" content="https://lasflores.software/assets/favicon-512.png" />
 
   <script type="application/ld+json">
   {
@@ -62,17 +66,22 @@
       background: rgba(13,15,20,0.85); backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
-    .nav-logo { font-family: var(--mono); font-size: 14px; color: var(--accent); text-decoration: none; letter-spacing: 0.05em; display: flex; align-items: center; gap: 8px; }
+    .nav-logo { font-family: var(--mono); font-size: 14px; color: var(--accent); text-decoration: none; letter-spacing: 0.05em; display: flex; align-items: center; gap: 10px; }
+    .nav-logo img { height: 28px; width: auto; filter: brightness(0) saturate(100%) invert(68%) sepia(47%) saturate(1130%) hue-rotate(347deg) brightness(101%) contrast(96%); }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
     .nav-links a:hover { color: var(--text); }
     .nav-cta { background: var(--accent); color: #0D0F14; text-decoration: none; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
 
     /* ── HERO ── */
-    #hero { min-height: 92vh; display: flex; align-items: center; padding: 120px clamp(24px,6vw,120px) 60px; position: relative; overflow: hidden; }
+    #hero { min-height: 92vh; display: flex; align-items: center; padding: 120px clamp(24px,6vw,120px) 60px; position: relative; overflow: hidden; gap: 48px; }
     .hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(245,158,11,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.04) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; }
     .hero-glow { position: absolute; width: 700px; height: 700px; background: radial-gradient(circle, rgba(245,158,11,0.10) 0%, transparent 70%); top: -150px; right: -150px; pointer-events: none; }
-    .hero-inner { max-width: 760px; position: relative; z-index: 1; }
+    .hero-inner { max-width: 700px; position: relative; z-index: 1; flex-shrink: 0; }
+    .hero-logo-wrap { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
+    .hero-logo-glow { position: absolute; width: 420px; height: 420px; background: radial-gradient(circle, rgba(245,158,11,0.14) 0%, transparent 72%); pointer-events: none; }
+    .hero-logo-wrap img { width: min(380px, 85%); height: auto; position: relative; filter: drop-shadow(0 0 60px rgba(245,158,11,0.15)); }
+    @media (max-width: 1000px) { .hero-logo-wrap { display: none; } }
     .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--accent); background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); padding: 6px 14px; border-radius: 100px; margin-bottom: 28px; letter-spacing: 0.06em; }
     .hero-tag::before { content: '●'; font-size: 8px; animation: blink 2s infinite; }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
@@ -152,8 +161,49 @@
     .reveal { opacity: 0; transform: translateY(24px); }
     .service-card, .example-card, .price-card { opacity: 0; transform: translateY(24px); }
 
+    /* ── NAV MOBILE ── */
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; width: 32px; height: 32px; flex-direction: column; justify-content: center; gap: 5px; padding: 0; }
+    .nav-toggle span { display: block; height: 2px; width: 100%; background: var(--text); border-radius: 2px; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { position: fixed; top: 64px; left: 0; right: 0; bottom: 0; z-index: 99; background: rgba(13,15,20,0.98); backdrop-filter: blur(12px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; transform: translateY(-12px); opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+    .mobile-menu.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .mobile-menu a { color: var(--text); text-decoration: none; font-size: 20px; font-weight: 600; }
+    .mobile-menu .nav-cta { margin-top: 12px; }
+
+    /* ── BACK TO TOP ── */
+    .back-to-top { position: fixed; bottom: 28px; right: 28px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #0D0F14; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .25s, transform .25s; }
+    .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .back-to-top:hover { opacity: .88; }
+
+    /* ── COOKIE BANNER ── */
+    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 95; background: var(--surface); border-top: 1px solid var(--border); padding: 20px clamp(20px,5vw,60px); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; transform: translateY(100%); transition: transform .3s; }
+    .cookie-banner.visible { transform: translateY(0); }
+    .cookie-text { font-size: 13px; color: #94A3B8; max-width: 640px; line-height: 1.5; }
+    .cookie-text a { color: var(--accent); }
+    .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+    .btn-cookie-accept { background: var(--accent); color: #0D0F14; border: none; padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
+    .btn-cookie-reject { background: none; border: 1px solid var(--border); color: var(--text); padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; }
+
+    /* ── CONTACT FORM ── */
+    .contact-form { width: 100%; max-width: 480px; display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+    .contact-form input, .contact-form textarea { background: var(--surface2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 12px 14px; font-size: 14px; font-family: var(--sans); resize: vertical; transition: border-color .2s; }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
+    .contact-form input:invalid:not(:placeholder-shown), .contact-form textarea:invalid:not(:placeholder-shown) { border-color: #EF4444; }
+    .contact-form label { font-size: 12px; color: var(--muted); text-align: left; margin-bottom: -8px; }
+    .contact-form .hp-field { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
+    .btn-submit { background: var(--accent); color: #0D0F14; border: none; padding: 13px 26px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity .2s; }
+    .btn-submit:hover { opacity: .88; }
+    .btn-submit:disabled { opacity: .5; cursor: not-allowed; }
+    .form-msg { font-size: 13px; padding: 10px 14px; border-radius: 8px; display: none; }
+    .form-msg.success { display: block; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #4ADE80; }
+    .form-msg.error { display: block; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #F87171; }
+    .divider-or { color: var(--muted); font-size: 13px; margin: 8px 0; }
+
     @media (max-width: 900px) {
       .nav-links { display: none; }
+      .nav-toggle { display: flex; }
       .pricing-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 32px; }
     }
@@ -162,7 +212,7 @@
 <body>
 
   <nav>
-    <a href="#hero" class="nav-logo">🌼 lasflores.software</a>
+    <a href="#hero" class="nav-logo"><img src="assets/logo.png" alt="Las Flores Software" /> lasflores.software</a>
     <ul class="nav-links">
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#ejemplos">Ejemplos</a></li>
@@ -170,7 +220,28 @@
       <li><a href="#sobre">Sobre</a></li>
     </ul>
     <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank" class="nav-cta">Consultar</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#servicios">Servicios</a>
+    <a href="#ejemplos">Ejemplos</a>
+    <a href="#precios">Precios</a>
+    <a href="#sobre">Sobre</a>
+    <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank" class="nav-cta">Consultar</a>
+  </div>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">↑</button>
+
+  <div class="cookie-banner" id="cookie-banner">
+    <p class="cookie-text">Usamos cookies solo para entender cómo se usa el sitio (Google Analytics). No vendemos ni compartimos tus datos. Ver <a href="privacidad.html">Política de Privacidad</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn-cookie-reject" id="cookie-reject">Rechazar</button>
+      <button class="btn-cookie-accept" id="cookie-accept">Aceptar</button>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section id="hero">
@@ -190,9 +261,13 @@
       </div>
       <div class="hero-stats" id="hero-stats">
         <div><div class="hero-stat-num">$0</div><div class="hero-stat-label">de hosting, para siempre</div></div>
-        <div><div class="hero-stat-num">6</div><div class="hero-stat-label">servicios combinables</div></div>
+        <div><div class="hero-stat-num">7</div><div class="hero-stat-label">servicios combinables</div></div>
         <div><div class="hero-stat-num">7+</div><div class="hero-stat-label">años construyendo software</div></div>
       </div>
+    </div>
+    <div class="hero-logo-wrap" id="hero-logo">
+      <div class="hero-logo-glow"></div>
+      <img src="assets/logo.png" alt="Las Flores Software — logo" />
     </div>
   </section>
 
@@ -272,6 +347,18 @@
           <li>Funciona con cualquier lector de código de barras</li>
           <li>Sin cajero ni empleado necesario para consultar</li>
           <li>Catálogo actualizable en cualquier momento</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <div class="service-name">QR Menú</div>
+        <div class="service-pitch">Para bares y restaurantes</div>
+        <p class="service-desc">Un QR en la mesa que abre tu carta digital — fotos, nombres y precios claros, pensada para consultar, no para vender con carrito.</p>
+        <ul class="service-features">
+          <li>Carta siempre actualizada, sin reimprimir nada</li>
+          <li>Se puede combinar con tienda si también vendés para llevar</li>
+          <li>Un QR distinto para la carta y otro para el pedido, si hace falta</li>
         </ul>
       </div>
 
@@ -409,10 +496,30 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
       Escribime por WhatsApp
     </a>
+
+    <p class="divider-or">— o completá el formulario —</p>
+
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mzzjqjba" method="POST">
+      <label for="cf-name">Nombre</label>
+      <input type="text" id="cf-name" name="name" placeholder="Tu nombre" required maxlength="80" />
+      <label for="cf-email">Email</label>
+      <input type="email" id="cf-email" name="email" placeholder="tu@email.com" required maxlength="120" />
+      <label for="cf-message">Mensaje</label>
+      <textarea id="cf-message" name="message" placeholder="Contame sobre tu negocio…" required minlength="10" maxlength="1000" rows="4"></textarea>
+      <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" />
+      <button type="submit" class="btn-submit" id="cf-submit">Enviar mensaje</button>
+      <p class="form-msg" id="cf-msg"></p>
+    </form>
+
     <div class="footer-contact">
       <a href="mailto:juliancarroccio@gmail.com">juliancarroccio@gmail.com</a>
       <a href="https://ar.linkedin.com/in/julian-carroccio" target="_blank">LinkedIn</a>
       <a href="https://github.com/juliancarroccio" target="_blank">GitHub</a>
+    </div>
+    <div class="footer-contact">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+      <a href="reembolsos.html">Reembolsos</a>
     </div>
     <p class="footer-copy">© 2026 Las Flores Software · Julian Carroccio · Las Flores, Buenos Aires</p>
   </footer>
@@ -427,7 +534,8 @@
       .from('#hero-title', { opacity: 0, y: 40, duration: 0.7 }, '-=0.2')
       .from('#hero-desc',  { opacity: 0, y: 24, duration: 0.6 }, '-=0.4')
       .from('#hero-ctas',  { opacity: 0, y: 20, duration: 0.5 }, '-=0.3')
-      .from('#hero-stats', { opacity: 0, y: 16, duration: 0.5 }, '-=0.3');
+      .from('#hero-stats', { opacity: 0, y: 16, duration: 0.5 }, '-=0.3')
+      .from('#hero-logo', { opacity: 0, scale: 0.85, duration: 0.8, ease: 'back.out(1.4)' }, '-=0.9');
 
     gsap.utils.toArray('.reveal').forEach(el => {
       gsap.to(el, { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out',
@@ -439,6 +547,92 @@
         start: 'top 88%',
         onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: 'power2.out' })
       });
+    });
+
+    // ── NAV MÓVIL ──
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    function closeMobileMenu() {
+      navToggle.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+    navToggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
+
+    // ── BACK TO TOP ──
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 600);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ── COOKIE BANNER + GA4 ──
+    const GA4_ID = 'G-XXXXXXXXXX'; // reemplazar por el ID real de Google Analytics
+    function loadGA4() {
+      if (window.gaLoaded) return;
+      window.gaLoaded = true;
+      const s = document.createElement('script');
+      s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ window.dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', GA4_ID);
+      window.gtag = gtag;
+    }
+    const cookieBanner = document.getElementById('cookie-banner');
+    try {
+      const consent = localStorage.getItem('lfs_cookie_consent');
+      if (consent === 'accepted') loadGA4();
+      else if (consent !== 'rejected') cookieBanner.classList.add('visible');
+    } catch (e) { cookieBanner.classList.add('visible'); }
+    document.getElementById('cookie-accept').addEventListener('click', () => {
+      try { localStorage.setItem('lfs_cookie_consent', 'accepted'); } catch (e) {}
+      cookieBanner.classList.remove('visible');
+      loadGA4();
+    });
+    document.getElementById('cookie-reject').addEventListener('click', () => {
+      try { localStorage.setItem('lfs_cookie_consent', 'rejected'); } catch (e) {}
+      cookieBanner.classList.remove('visible');
+    });
+
+    // ── FORMULARIO DE CONTACTO ──
+    const cf = document.getElementById('contact-form');
+    const cfMsg = document.getElementById('cf-msg');
+    const cfSubmit = document.getElementById('cf-submit');
+    cf.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (cf.querySelector('.hp-field').value) return; // honeypot anti-spam
+      cfSubmit.disabled = true;
+      cfSubmit.textContent = 'Enviando…';
+      cfMsg.className = 'form-msg';
+      try {
+        const res = await fetch(cf.action, {
+          method: 'POST',
+          body: new FormData(cf),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          cfMsg.textContent = '¡Gracias! Te respondo en menos de 24hs.';
+          cfMsg.className = 'form-msg success';
+          cf.reset();
+        } else {
+          cfMsg.textContent = 'No se pudo enviar. Probá de nuevo o escribime por WhatsApp.';
+          cfMsg.className = 'form-msg error';
+        }
+      } catch (err) {
+        cfMsg.textContent = 'No se pudo enviar. Probá de nuevo o escribime por WhatsApp.';
+        cfMsg.className = 'form-msg error';
+      } finally {
+        cfSubmit.disabled = false;
+        cfSubmit.textContent = 'Enviar mensaje';
+      }
     });
   </script>
 </body>
