@@ -55,8 +55,8 @@
       --sans:     'Inter', system-ui, sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+    html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; overflow-x: hidden; max-width: 100%; }
 
     /* ── NAV ── */
     nav {
@@ -188,7 +188,9 @@
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
+      .nav-cta { display: none; }
       .nav-toggle { display: flex; }
+      .hero-inner { flex-shrink: 1; width: 100%; max-width: 100%; min-width: 0; }
       .pricing-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 32px; }
     }
