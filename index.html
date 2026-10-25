@@ -137,6 +137,20 @@
     .price-for { font-size: 13px; color: var(--accent2); font-weight: 600; margin-top: auto; }
     .pricing-note { font-size: 13px; color: var(--muted); text-align: center; }
 
+    /* ── A MEDIDA ── */
+    .custom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .custom-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 36px; display: flex; flex-direction: column; gap: 16px; transition: border-color .2s, transform .2s; }
+    .custom-card:hover { border-color: rgba(245,158,11,0.3); transform: translateY(-2px); }
+    .custom-card h3 { font-size: 22px; font-weight: 700; color: var(--text); }
+    .custom-card p { font-size: 15px; color: #94A3B8; line-height: 1.7; }
+    .custom-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .custom-tag { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); padding: 4px 10px; border-radius: 100px; }
+    .custom-steps { list-style: none; display: flex; flex-direction: column; gap: 10px; counter-reset: paso; margin-top: 4px; }
+    .custom-steps li { counter-increment: paso; display: flex; gap: 12px; font-size: 14px; color: #94A3B8; line-height: 1.5; }
+    .custom-steps li::before { content: counter(paso); flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: rgba(245,158,11,0.12); color: var(--accent); font-family: var(--mono); font-size: 12px; display: flex; align-items: center; justify-content: center; }
+    .custom-steps strong { color: var(--text); font-weight: 600; }
+    .custom-cta { margin-top: auto; padding-top: 8px; }
+
     /* ── SOBRE ── */
     .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start; }
     .about-text p { color: #94A3B8; font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
@@ -192,6 +206,8 @@
       .nav-toggle { display: flex; }
       .hero-inner { flex-shrink: 1; width: 100%; max-width: 100%; min-width: 0; }
       .pricing-grid { grid-template-columns: 1fr; }
+      .custom-grid { grid-template-columns: 1fr; }
+      .custom-card { padding: 28px; }
       .about-grid { grid-template-columns: 1fr; gap: 32px; }
     }
   </style>
@@ -202,6 +218,7 @@
     <a href="#hero" class="nav-logo"><img src="assets/logo.png" alt="Las Flores Software" /> lasflores.software</a>
     <ul class="nav-links">
       <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#a-medida">A medida</a></li>
       <li><a href="#ejemplos">Ejemplos</a></li>
       <li><a href="#precios">Precios</a></li>
       <li><a href="#sobre">Sobre</a></li>
@@ -214,6 +231,7 @@
 
   <div class="mobile-menu" id="mobile-menu">
     <a href="#servicios">Servicios</a>
+    <a href="#a-medida">A medida</a>
     <a href="#ejemplos">Ejemplos</a>
     <a href="#precios">Precios</a>
     <a href="#sobre">Sobre mí</a>
@@ -352,6 +370,50 @@
     </div>
   </section>
 
+  <!-- A MEDIDA -->
+  <section id="a-medida">
+    <p class="section-label reveal">// a medida</p>
+    <h2 class="section-title reveal">¿Necesitás algo que no está en la lista?</h2>
+    <p class="section-sub reveal">Además de los servicios listos para usar, diseño software y hardware a medida — desde sumarle una funcionalidad a lo que ya tenés hasta crear un producto completo desde cero.</p>
+    <div class="custom-grid">
+
+      <div class="custom-card reveal">
+        <div class="service-icon">💻</div>
+        <h3>Software a medida</h3>
+        <p>Sistemas pensados para cómo trabaja tu negocio, no al revés. Le agrego funcionalidades a lo que ya usás o creo el software desde cero: paneles de gestión, integraciones, automatizaciones, apps web.</p>
+        <ul class="custom-steps">
+          <li><span><strong>Entendemos el problema</strong> — qué hacés hoy a mano y qué querés resolver.</span></li>
+          <li><span><strong>Propuesta y presupuesto</strong> — alcance claro antes de empezar.</span></li>
+          <li><span><strong>Desarrollo con pruebas</strong> — con tests automatizados, no "a ojo".</span></li>
+          <li><span><strong>Entrega y soporte</strong> — funcionando en tu negocio, con ajustes incluidos.</span></li>
+        </ul>
+        <div class="custom-cta">
+          <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20quiero%20consultar%20por%20software%20a%20medida" target="_blank" class="btn-ghost">Contame tu idea →</a>
+        </div>
+      </div>
+
+      <div class="custom-card reveal">
+        <div class="service-icon">🔧</div>
+        <h3>Hardware a medida</h3>
+        <p>Dispositivos electrónicos con ESP32 y Arduino, de la idea al producto instalado: sensores, controles, automatización, pantallas, equipos conectados a internet.</p>
+        <ul class="custom-steps">
+          <li><span><strong>Idea</strong> — definimos qué tiene que hacer el dispositivo.</span></li>
+          <li><span><strong>Diseño</strong> — electrónica y gabinete pensados para el uso real.</span></li>
+          <li><span><strong>Impresión 3D</strong> — con filamentos técnicos, resistentes al uso y al calor.</span></li>
+          <li><span><strong>Programación</strong> — firmware a medida, con conexión WiFi si hace falta.</span></li>
+          <li><span><strong>Instalación</strong> — lo dejo funcionando en tu lugar.</span></li>
+        </ul>
+        <div class="custom-tags">
+          <span class="custom-tag">ESP32</span><span class="custom-tag">Arduino</span><span class="custom-tag">Impresión 3D</span><span class="custom-tag">IoT</span>
+        </div>
+        <div class="custom-cta">
+          <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20quiero%20consultar%20por%20hardware%20a%20medida" target="_blank" class="btn-ghost">Contame tu idea →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- EJEMPLOS -->
   <section id="ejemplos">
     <p class="section-label reveal">// ejemplos reales</p>
@@ -447,7 +509,7 @@
       </div>
 
     </div>
-    <p class="pricing-note">Siempre incluido, en cualquier plan: SEO básico, Google Analytics, código QR, hosting gratis para siempre.</p>
+    <p class="pricing-note">Siempre incluido, en cualquier plan: SEO básico, Google Analytics, código QR, hosting gratis para siempre.<br>Software y hardware a medida: se cotiza por proyecto.</p>
   </section>
 
   <!-- SOBRE -->
