@@ -80,7 +80,7 @@
     .hero-inner { max-width: 700px; position: relative; z-index: 1; flex-shrink: 0; }
     .hero-logo-wrap { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
     .hero-logo-glow { position: absolute; width: 420px; height: 420px; background: radial-gradient(circle, rgba(245,158,11,0.14) 0%, transparent 72%); pointer-events: none; }
-    .hero-logo-wrap img { width: min(380px, 85%); height: auto; position: relative; filter: drop-shadow(0 0 60px rgba(245,158,11,0.15)); }
+    .hero-logo-wrap img { width: min(380px, 85%); height: auto; position: relative; filter: brightness(0) invert(1) drop-shadow(0 0 60px rgba(245,158,11,0.25)); }
     @media (max-width: 1000px) { .hero-logo-wrap { display: none; } }
     .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--accent); background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); padding: 6px 14px; border-radius: 100px; margin-bottom: 28px; letter-spacing: 0.06em; }
     .hero-tag::before { content: '●'; font-size: 8px; animation: blink 2s infinite; }
@@ -185,21 +185,6 @@
     .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
     .btn-cookie-accept { background: var(--accent); color: #0D0F14; border: none; padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
     .btn-cookie-reject { background: none; border: 1px solid var(--border); color: var(--text); padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; }
-
-    /* ── CONTACT FORM ── */
-    .contact-form { width: 100%; max-width: 480px; display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
-    .contact-form input, .contact-form textarea { background: var(--surface2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 12px 14px; font-size: 14px; font-family: var(--sans); resize: vertical; transition: border-color .2s; }
-    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
-    .contact-form input:invalid:not(:placeholder-shown), .contact-form textarea:invalid:not(:placeholder-shown) { border-color: #EF4444; }
-    .contact-form label { font-size: 12px; color: var(--muted); text-align: left; margin-bottom: -8px; }
-    .contact-form .hp-field { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
-    .btn-submit { background: var(--accent); color: #0D0F14; border: none; padding: 13px 26px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity .2s; }
-    .btn-submit:hover { opacity: .88; }
-    .btn-submit:disabled { opacity: .5; cursor: not-allowed; }
-    .form-msg { font-size: 13px; padding: 10px 14px; border-radius: 8px; display: none; }
-    .form-msg.success { display: block; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #4ADE80; }
-    .form-msg.error { display: block; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #F87171; }
-    .divider-or { color: var(--muted); font-size: 13px; margin: 8px 0; }
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
@@ -497,20 +482,6 @@
       Escribime por WhatsApp
     </a>
 
-    <p class="divider-or">— o completá el formulario —</p>
-
-    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mzzjqjba" method="POST">
-      <label for="cf-name">Nombre</label>
-      <input type="text" id="cf-name" name="name" placeholder="Tu nombre" required maxlength="80" />
-      <label for="cf-email">Email</label>
-      <input type="email" id="cf-email" name="email" placeholder="tu@email.com" required maxlength="120" />
-      <label for="cf-message">Mensaje</label>
-      <textarea id="cf-message" name="message" placeholder="Contame sobre tu negocio…" required minlength="10" maxlength="1000" rows="4"></textarea>
-      <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" />
-      <button type="submit" class="btn-submit" id="cf-submit">Enviar mensaje</button>
-      <p class="form-msg" id="cf-msg"></p>
-    </form>
-
     <div class="footer-contact">
       <a href="mailto:juliancarroccio@gmail.com">juliancarroccio@gmail.com</a>
       <a href="https://ar.linkedin.com/in/julian-carroccio" target="_blank">LinkedIn</a>
@@ -600,39 +571,6 @@
     document.getElementById('cookie-reject').addEventListener('click', () => {
       try { localStorage.setItem('lfs_cookie_consent', 'rejected'); } catch (e) {}
       cookieBanner.classList.remove('visible');
-    });
-
-    // ── FORMULARIO DE CONTACTO ──
-    const cf = document.getElementById('contact-form');
-    const cfMsg = document.getElementById('cf-msg');
-    const cfSubmit = document.getElementById('cf-submit');
-    cf.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (cf.querySelector('.hp-field').value) return; // honeypot anti-spam
-      cfSubmit.disabled = true;
-      cfSubmit.textContent = 'Enviando…';
-      cfMsg.className = 'form-msg';
-      try {
-        const res = await fetch(cf.action, {
-          method: 'POST',
-          body: new FormData(cf),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          cfMsg.textContent = '¡Gracias! Te respondo en menos de 24hs.';
-          cfMsg.className = 'form-msg success';
-          cf.reset();
-        } else {
-          cfMsg.textContent = 'No se pudo enviar. Probá de nuevo o escribime por WhatsApp.';
-          cfMsg.className = 'form-msg error';
-        }
-      } catch (err) {
-        cfMsg.textContent = 'No se pudo enviar. Probá de nuevo o escribime por WhatsApp.';
-        cfMsg.className = 'form-msg error';
-      } finally {
-        cfSubmit.disabled = false;
-        cfSubmit.textContent = 'Enviar mensaje';
-      }
     });
   </script>
 </body>
