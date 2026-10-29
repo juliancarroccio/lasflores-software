@@ -1,58 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidad — Las Flores Software</title>
-  <meta name="description" content="Política de privacidad de Las Flores Software: qué datos recolectamos, por qué, y cómo los protegemos." />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-  <link rel="canonical" href="https://lasflores.software/privacidad.html" />
-  <meta name="robots" content="noindex, follow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg:#0D0F14; --surface:#14120F; --border:rgba(255,255,255,0.07); --accent:#F59E0B; --text:#E2E8F0; --muted:#64748B; }
-    body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 80px 24px 100px; }
-    .back { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 32px; }
-    h1 { font-size: clamp(28px, 4vw, 38px); margin-bottom: 8px; letter-spacing: -0.02em; }
-    .updated { font-size: 13px; color: var(--muted); margin-bottom: 40px; }
-    h2 { font-size: 20px; margin: 36px 0 12px; color: var(--accent); }
-    p, li { color: #94A3B8; font-size: 15px; margin-bottom: 12px; }
-    ul { padding-left: 20px; margin-bottom: 12px; }
-    a { color: var(--accent); }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Política de Privacidad — Las Flores Software</title>
+<meta name="description" content="Política de privacidad de Las Flores Software: qué datos recolectamos, por qué, y cómo los protegemos." />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="canonical" href="https://lasflores.software/privacidad.html" />
+<meta name="robots" content="noindex, follow" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/chrome.css" />
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important;}</style></noscript>
 </head>
 <body>
-  <div class="wrap">
-    <a href="index.html" class="back">← Volver al inicio</a>
-    <h1>Política de Privacidad</h1>
-    <p class="updated">Última actualización: 24 de octubre de 2026</p>
 
-    <p>Las Flores Software (Julian Carroccio) respeta tu privacidad. Esta página explica qué datos recolectamos cuando visitás este sitio y por qué.</p>
+<header class="sitenav">
+  <a href="index.html" class="nav-word"><img src="assets/logo.png" alt="Las Flores Software" /> lasflores.software</a>
+  <nav class="nav-links">
+    <a class="nav-link" href="index.html#servicios">Servicios</a>
+    <a class="nav-link" href="index.html#ejemplos">Ejemplos</a>
+    <a class="nav-link" href="index.html#a-medida">A medida</a>
+    <a class="nav-link" href="index.html#sobre">Sobre</a>
+    <a class="nav-btn" href="index.html#precios">Pedir presupuesto</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-    <h2>Qué datos recolectamos</h2>
-    <ul>
-      <li><strong>WhatsApp:</strong> si nos escribís por WhatsApp, los datos que vos decidas compartir en esa conversación (nombre, teléfono, lo que nos cuentes de tu negocio), solo para responderte.</li>
-      <li><strong>Google Analytics (GA4):</strong> datos de uso anónimos (páginas visitadas, dispositivo, ubicación aproximada), solo si aceptás cookies en el banner del sitio.</li>
-    </ul>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html#servicios">Servicios</a>
+  <a href="index.html#ejemplos">Ejemplos</a>
+  <a href="index.html#a-medida">A medida</a>
+  <a href="index.html#precios">Precios</a>
+  <a href="index.html#sobre">Sobre mí</a>
+  <a class="nav-btn" href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank">Hablar por WhatsApp</a>
+</div>
 
-    <h2>Qué NO hacemos</h2>
-    <ul>
-      <li>No vendemos ni compartimos tus datos con terceros con fines comerciales.</li>
-      <li>No usamos tus datos para nada distinto de lo que explícitamente pediste (responder tu consulta).</li>
-      <li>No guardamos datos de pago en este sitio — cualquier pago se coordina directamente por WhatsApp o fuera del sitio.</li>
-    </ul>
+<button class="back-to-top" id="back-to-top" aria-label="Volver arriba">↑</button>
 
-    <h2>Cookies</h2>
-    <p>Usamos cookies únicamente para Google Analytics, y solo si aceptás el banner de cookies. Podés rechazarlas sin que eso afecte el funcionamiento del sitio. Podés borrar las cookies en cualquier momento desde la configuración de tu navegador.</p>
-
-    <h2>Tus derechos</h2>
-    <p>Podés pedirnos en cualquier momento que te digamos qué datos tenemos tuyos, que los corrijamos o que los eliminemos, escribiendo a <a href="mailto:juliancarroccio@gmail.com">juliancarroccio@gmail.com</a>.</p>
-
-    <h2>Contacto</h2>
-    <p>Cualquier duda sobre esta política: <a href="mailto:juliancarroccio@gmail.com">juliancarroccio@gmail.com</a> o por <a href="https://wa.me/5492244472255" target="_blank">WhatsApp</a>.</p>
+<div class="cookie-banner" id="cookie-banner">
+  <p class="cookie-text">Usamos cookies solo para entender cómo se usa el sitio (Google Analytics). No vendemos ni compartimos tus datos. Ver <a href="privacidad.html">Política de Privacidad</a>.</p>
+  <p class="cookie-text-short">Usamos cookies para medir visitas. <a href="privacidad.html">Más info</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn-cookie-reject" id="cookie-reject">Rechazar</button>
+    <button class="btn-cookie-accept" id="cookie-accept">Aceptar</button>
   </div>
+</div>
+
+<section class="legal-top field pad" data-ink="#EFEFEC">
+  <h1 data-reveal>Política de Privacidad</h1>
+  <p class="legal-lead" data-reveal>Qué datos pedimos cuando visitás este sitio, por qué, y qué hacemos (y no hacemos) con ellos.</p>
+  <p class="legal-updated" data-reveal>Última actualización: 24 de octubre de 2026</p>
+</section>
+
+<section class="legal-body pad" data-ink="#0C2C4B">
+  <div class="legal-content">
+    <div class="legal-section">
+      <p data-reveal>Las Flores Software (Julian Carroccio) respeta tu privacidad. Esta página explica qué datos recolectamos cuando visitás este sitio y por qué.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="datos" data-reveal>Qué datos recolectamos</h2>
+      <ul class="legal-list" data-reveal>
+        <li><span><strong>WhatsApp:</strong> si nos escribís por WhatsApp, los datos que vos decidas compartir en esa conversación (nombre, teléfono, lo que nos cuentes de tu negocio), solo para responderte.</span></li>
+        <li><span><strong>Google Analytics (GA4):</strong> datos de uso anónimos (páginas visitadas, dispositivo, ubicación aproximada), solo si aceptás cookies en el banner del sitio.</span></li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="no-hacemos" data-reveal>Qué no hacemos</h2>
+      <ul class="legal-list" data-reveal>
+        <li><span>No vendemos ni compartimos tus datos con terceros con fines comerciales.</span></li>
+        <li><span>No usamos tus datos para nada distinto de lo que explícitamente pediste (responder tu consulta).</span></li>
+        <li><span>No guardamos datos de pago en este sitio — cualquier pago se coordina directamente por WhatsApp o fuera del sitio.</span></li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="cookies" data-reveal>Cookies</h2>
+      <p data-reveal>Usamos cookies únicamente para Google Analytics, y solo si aceptás el banner de cookies. Podés rechazarlas sin que eso afecte el funcionamiento del sitio. Podés borrar las cookies en cualquier momento desde la configuración de tu navegador.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="derechos" data-reveal>Tus derechos</h2>
+      <p data-reveal>Podés pedirnos en cualquier momento que te digamos qué datos tenemos tuyos, que los corrijamos o que los eliminemos, escribiendo a <a href="mailto:juliancarroccio@gmail.com">juliancarroccio@gmail.com</a>.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="contacto-legal" data-reveal>Contacto</h2>
+      <p data-reveal>Cualquier duda sobre esta política: <a href="mailto:juliancarroccio@gmail.com">juliancarroccio@gmail.com</a> o por <a href="https://wa.me/5492244472255" target="_blank">WhatsApp</a>.</p>
+    </div>
+  </div>
+
+  <aside class="legal-toc" aria-label="Índice">
+    <span class="toc-label">En esta página</span>
+    <a href="#datos">Qué datos recolectamos</a>
+    <a href="#no-hacemos">Qué no hacemos</a>
+    <a href="#cookies">Cookies</a>
+    <a href="#derechos">Tus derechos</a>
+    <a href="#contacto-legal">Contacto</a>
+  </aside>
+</section>
+
+<footer class="site-footer" id="contacto" data-ink="#EFEFEC">
+  <div class="footer-mark" data-reveal>
+    <img src="assets/logo.png" alt="" aria-hidden="true" />
+    <div class="fname">Las Flores Software</div>
+  </div>
+  <div class="footer-cta-row" data-reveal>
+    <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank" class="btn btn--wa">Escribime por WhatsApp</a>
+    <p style="max-width:40ch;opacity:.75;font-size:15px;">Respondo en menos de 24hs. Primero vemos qué necesitás, después hablamos de precio.</p>
+  </div>
+  <div class="footer-cols" data-reveal>
+    <div class="footer-col">
+      <a href="mailto:juliancarroccio@gmail.com">juliancarroccio@gmail.com</a>
+      <a href="https://ar.linkedin.com/in/julian-carroccio" target="_blank">LinkedIn</a>
+      <a href="https://github.com/juliancarroccio" target="_blank">GitHub</a>
+    </div>
+    <div class="footer-col">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+      <a href="reembolsos.html">Reembolsos</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Las Flores Software · Julian Carroccio</span>
+    <span>Las Flores, Buenos Aires</span>
+  </div>
+</footer>
+
+<script src="assets/chrome.js"></script>
 </body>
 </html>

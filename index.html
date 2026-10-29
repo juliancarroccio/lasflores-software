@@ -1,665 +1,694 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Flores Software — Sitios, tiendas y sistemas para tu negocio</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Las Flores Software: software real, precio de pueblo</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
-  <meta name="description" content="Sitios web, tiendas online y sistemas a medida (reservas, turnos, entradas) para negocios de Las Flores, Buenos Aires. Pago único o mensual, hosting gratis para siempre." />
-  <meta name="author" content="Julian Carroccio" />
-  <link rel="canonical" href="https://lasflores.software" />
+<meta name="description" content="Sitios web, tiendas online y sistemas a medida (reservas, turnos, entradas) para negocios de Las Flores, Buenos Aires. Pago único o mensual, hosting gratis para siempre." />
+<meta name="author" content="Julian Carroccio" />
+<link rel="canonical" href="https://lasflores.software" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://lasflores.software" />
-  <meta property="og:title" content="Las Flores Software — Sitios, tiendas y sistemas para tu negocio" />
-  <meta property="og:description" content="Sitios web, tiendas online y sistemas a medida para negocios de Las Flores. Pago único o mensual, hosting gratis para siempre." />
-  <meta property="og:image" content="https://lasflores.software/assets/favicon-512.png" />
-  <meta property="og:locale" content="es_AR" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lasflores.software" />
+<meta property="og:title" content="Las Flores Software: software real, precio de pueblo" />
+<meta property="og:description" content="Sitios web, tiendas online y sistemas a medida para negocios de Las Flores. Pago único o mensual, hosting gratis para siempre." />
+<meta property="og:image" content="https://lasflores.software/assets/favicon-512.png" />
+<meta property="og:locale" content="es_AR" />
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Las Flores Software" />
-  <meta name="twitter:description" content="Sitios web, tiendas online y sistemas a medida para negocios de Las Flores." />
-  <meta name="twitter:image" content="https://lasflores.software/assets/favicon-512.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Las Flores Software" />
+<meta name="twitter:description" content="Sitios web, tiendas online y sistemas a medida para negocios de Las Flores." />
+<meta name="twitter:image" content="https://lasflores.software/assets/favicon-512.png" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Las Flores Software",
-    "url": "https://lasflores.software",
-    "founder": { "@type": "Person", "name": "Julian Carroccio" },
-    "address": { "@type": "PostalAddress", "addressLocality": "Las Flores", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
-    "sameAs": ["https://github.com/juliancarroccio", "https://ar.linkedin.com/in/julian-carroccio"]
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Las Flores Software",
+  "url": "https://lasflores.software",
+  "founder": { "@type": "Person", "name": "Julian Carroccio" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Las Flores", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
+  "sameAs": ["https://github.com/juliancarroccio", "https://ar.linkedin.com/in/julian-carroccio"]
+}
+</script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important;}</style></noscript>
 
-    :root {
-      --bg:       #0D0F14;
-      --surface:  #14120F;
-      --surface2: #1A1612;
-      --border:   rgba(255,255,255,0.07);
-      --accent:   #F59E0B;
-      --accent2:  #FB923C;
-      --text:     #E2E8F0;
-      --muted:    #64748B;
-      --mono:     'JetBrains Mono', monospace;
-      --sans:     'Inter', system-ui, sans-serif;
-    }
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: auto; overflow-x: hidden; }
+body { margin: 0; overflow-x: hidden; max-width: 100%; background: #EFEFEC; color: #0C2C4B; font-family: 'Jost', system-ui, sans-serif; font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+h1,h2,h3,h4,p,ul,ol,figure,blockquote { margin: 0; }
+ul,ol { padding: 0; list-style: none; }
+img,svg { display: block; max-width: 100%; }
+button, input { font: inherit; color: inherit; }
+button { background: none; border: 0; padding: 0; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid #D98E2B; outline-offset: 3px; }
+::selection { background: #D98E2B; color: #0C2C4B; }
 
-    html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
-    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; overflow-x: hidden; max-width: 100%; }
+:root {
+  --navy: #0C2C4B;
+  --paper: #EFEFEC;
+  --gold: #D98E2B;
+  --gold-dim: #B5752A;
+  --green: #1F4D3A;
+  --muted-on-paper: #43596E;
+  --muted-on-navy: #93A7B8;
+  --wa: #0B6E39;
+  --margin: clamp(20px, 5vw, 80px);
+  --step-small: 14px;
+  --step-body: clamp(17px, 1rem + 0.2vw, 18px);
+  --step-lead: clamp(20px, 1.2rem + 0.5vw, 23px);
+  --step-head: clamp(30px, 1.2rem + 2.6vw, 44px);
+  --step-display: clamp(48px, 1.5rem + 7.5vw, 104px);
+  --ease-out: cubic-bezier(.22,1,.36,1);
+  --t-reveal: 760ms;
+}
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 clamp(24px, 5vw, 80px); height: 64px;
-      background: rgba(13,15,20,0.85); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo { font-family: var(--mono); font-size: 14px; color: var(--accent); text-decoration: none; letter-spacing: 0.05em; display: flex; align-items: center; gap: 10px; }
-    .nav-logo img { height: 28px; width: auto; filter: brightness(0) saturate(100%) invert(68%) sepia(47%) saturate(1130%) hue-rotate(347deg) brightness(101%) contrast(96%); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
-    .nav-links a:hover { color: var(--text); }
-    .nav-cta { background: var(--accent); color: #0D0F14; text-decoration: none; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+h1,h2,h3 { font-weight: 700; letter-spacing: -0.03em; text-wrap: balance; }
+p { max-width: 62ch; }
 
-    /* ── HERO ── */
-    #hero { min-height: 92vh; display: flex; align-items: center; padding: 120px clamp(24px,6vw,120px) 60px; position: relative; overflow: hidden; gap: 48px; }
-    .hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(245,158,11,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.04) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; }
-    .hero-glow { position: absolute; width: 700px; height: 700px; background: radial-gradient(circle, rgba(245,158,11,0.10) 0%, transparent 70%); top: -150px; right: -150px; pointer-events: none; }
-    .hero-inner { max-width: 700px; position: relative; z-index: 1; flex-shrink: 0; }
-    .hero-logo-wrap { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
-    .hero-logo-glow { position: absolute; width: 420px; height: 420px; background: radial-gradient(circle, rgba(245,158,11,0.14) 0%, transparent 72%); pointer-events: none; }
-    .hero-logo-wrap img { width: min(380px, 85%); height: auto; position: relative; filter: brightness(0) invert(1) drop-shadow(0 0 60px rgba(245,158,11,0.25)); }
-    @media (max-width: 1000px) { .hero-logo-wrap { display: none; } }
-    .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--accent); background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); padding: 6px 14px; border-radius: 100px; margin-bottom: 28px; letter-spacing: 0.06em; }
-    .hero-tag::before { content: '●'; font-size: 8px; animation: blink 2s infinite; }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
-    .hero-title { font-size: clamp(36px, 5.5vw, 60px); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 20px; }
-    .hero-title span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-desc { font-size: 17px; color: #94A3B8; max-width: 580px; margin-bottom: 36px; line-height: 1.75; }
-    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0D0F14; text-decoration: none; padding: 13px 26px; border-radius: 8px; font-size: 14px; font-weight: 600; transition: opacity .2s, transform .2s; }
-    .btn-primary:hover { opacity: .88; transform: translateY(-1px); }
-    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border); color: var(--text); text-decoration: none; padding: 13px 26px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: border-color .2s, background .2s; }
-    .btn-ghost:hover { border-color: rgba(255,255,255,.2); background: rgba(255,255,255,.04); }
-    .hero-stats { display: flex; gap: 40px; flex-wrap: wrap; }
-    .hero-stat-num { font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1; }
-    .hero-stat-label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+/* ---------- fixed header: no bar, no blur, ink follows the chapter beneath it ---------- */
+header.sitenav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px var(--margin);
+  color: var(--header-ink, var(--navy));
+  transition: color 300ms ease;
+  pointer-events: none;
+}
+header.sitenav * { pointer-events: auto; }
+.nav-word { font-weight: 700; font-size: 15px; letter-spacing: -0.01em; display: flex; align-items: center; gap: 9px; }
+.nav-word img { height: 22px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a.nav-link { font-size: 14px; font-weight: 500; opacity: .82; transition: opacity .18s; }
+.nav-links a.nav-link:hover { opacity: 1; }
+.nav-btn { font-size: 14px; font-weight: 600; padding: 10px 20px; border: 1.5px solid currentColor; border-radius: 999px; transition: background-color .18s, color .18s; }
+.nav-btn:hover { background: currentColor; color: var(--navy); }
+.nav-toggle { display: none; width: 30px; height: 30px; flex-direction: column; justify-content: center; gap: 6px; }
+.nav-toggle span { display: block; height: 2px; width: 100%; background: currentColor; transition: transform .25s, opacity .25s; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+}
 
-    /* ── SECTIONS ── */
-    section { padding: 100px clamp(24px, 8vw, 140px); max-width: 1300px; margin: 0 auto; }
-    .section-label { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; }
-    .section-title { font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; color: var(--text); }
-    .section-sub { font-size: 16px; color: #94A3B8; max-width: 640px; margin-bottom: 48px; line-height: 1.7; }
+.mobile-menu { position: fixed; inset: 0; z-index: 99; background: var(--navy); color: var(--paper); display: none; flex-direction: column; align-items: flex-start; justify-content: center; gap: 26px; padding: 0 var(--margin); transform: translateY(-16px); opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+.mobile-menu.open { display: flex; opacity: 1; transform: translateY(0); pointer-events: auto; }
+.mobile-menu a { font-size: 30px; font-weight: 600; }
+.mobile-menu .nav-btn { border-color: var(--paper); margin-top: 8px; }
+.mobile-menu .nav-btn:hover { background: var(--paper); color: var(--navy); }
 
-    /* ── SERVICIOS ── */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
-    .service-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 14px; transition: border-color .2s, transform .2s; }
-    .service-card:hover { border-color: rgba(245,158,11,0.3); transform: translateY(-2px); }
-    .service-icon { width: 44px; height: 44px; background: rgba(245,158,11,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
-    .service-name { font-size: 17px; font-weight: 700; color: var(--text); }
-    .service-pitch { font-size: 14px; color: var(--accent2); font-weight: 500; }
-    .service-desc { font-size: 14px; color: #94A3B8; line-height: 1.65; flex: 1; }
-    .service-features { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
-    .service-features li { font-size: 13px; color: #94A3B8; display: flex; gap: 8px; }
-    .service-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+/* ---------- shared section rhythm ---------- */
+.field { width: 100%; }
+.pad { padding-left: var(--margin); padding-right: var(--margin); }
+.small { font-size: var(--step-small); }
+.lead { font-size: var(--step-lead); line-height: 1.4; }
+.muted-p { color: var(--muted-on-paper); }
+.muted-n { color: var(--muted-on-navy); }
 
-    /* ── EJEMPLOS ── */
-    .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-    .example-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; transition: border-color .2s, transform .2s; }
-    .example-card:hover { border-color: rgba(245,158,11,0.3); transform: translateY(-2px); }
-    .example-badge { font-family: var(--mono); font-size: 10px; color: var(--accent); background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); padding: 3px 10px; border-radius: 100px; align-self: flex-start; letter-spacing: 0.05em; }
-    .example-name { font-size: 16px; font-weight: 700; color: var(--text); }
-    .example-desc { font-size: 13px; color: #94A3B8; line-height: 1.55; flex: 1; }
-    .example-link { font-size: 13px; color: var(--accent); font-weight: 600; display: flex; align-items: center; gap: 4px; }
-    .example-card.soon { opacity: 0.6; cursor: default; }
-    .example-card.soon .example-badge { color: var(--muted); background: rgba(255,255,255,0.04); border-color: var(--border); }
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 28px; background: var(--navy); color: var(--paper); border-radius: 999px; font-weight: 600; font-size: 15px; transition: transform .16s var(--ease-out), opacity .16s; }
+.btn:hover { transform: translateY(-2px); opacity: .92; }
+.btn:active { transform: scale(.97); }
+.btn--on-navy { background: var(--gold); color: var(--navy); }
+.btn--on-gold { background: var(--navy); color: var(--paper); }
+.btn--on-green { background: var(--paper); color: var(--navy); }
+.btn--outline { background: none; border: 1.5px solid currentColor; }
+.btn--wa { background: var(--wa); color: #fff; }
+.text-link { font-weight: 600; font-size: 15px; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; transition: opacity .16s; }
+.text-link:hover { opacity: .7; }
 
-    /* ── PRECIOS ── */
-    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
-    .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 36px; display: flex; flex-direction: column; gap: 18px; }
-    .price-card--featured { border-color: rgba(245,158,11,0.35); background: linear-gradient(160deg, rgba(245,158,11,0.05) 0%, var(--surface) 60%); }
-    .price-label { font-size: 13px; font-family: var(--mono); color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
-    .price-amount { font-size: 42px; font-weight: 700; color: var(--accent); line-height: 1; }
-    .price-amount span { font-family: var(--mono); font-size: 13px; color: var(--muted); font-weight: 400; }
-    .price-desc { font-size: 14px; color: #94A3B8; line-height: 1.6; }
-    .price-for { font-size: 13px; color: var(--accent2); font-weight: 600; margin-top: auto; }
-    .pricing-note { font-size: 13px; color: var(--muted); text-align: center; }
+[data-reveal] { opacity: 0; transform: translateY(26px); transition: opacity var(--t-reveal) var(--ease-out), transform var(--t-reveal) var(--ease-out); }
+[data-reveal].is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
 
-    /* ── A MEDIDA ── */
-    .custom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .custom-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 36px; display: flex; flex-direction: column; gap: 16px; transition: border-color .2s, transform .2s; }
-    .custom-card:hover { border-color: rgba(245,158,11,0.3); transform: translateY(-2px); }
-    .custom-card h3 { font-size: 22px; font-weight: 700; color: var(--text); }
-    .custom-card p { font-size: 15px; color: #94A3B8; line-height: 1.7; }
-    .custom-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .custom-tag { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); padding: 4px 10px; border-radius: 100px; }
-    .custom-steps { list-style: none; display: flex; flex-direction: column; gap: 10px; counter-reset: paso; margin-top: 4px; }
-    .custom-steps li { counter-increment: paso; display: flex; gap: 12px; font-size: 14px; color: #94A3B8; line-height: 1.5; }
-    .custom-steps li::before { content: counter(paso); flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: rgba(245,158,11,0.12); color: var(--accent); font-family: var(--mono); font-size: 12px; display: flex; align-items: center; justify-content: center; }
-    .custom-steps strong { color: var(--text); font-weight: 600; }
-    .custom-cta { margin-top: auto; padding-top: 8px; }
+/* ============ HERO ============ */
+.hero-top { background: var(--paper); color: var(--navy); min-height: 58svh; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 110px; padding-bottom: 36px; }
+.hero-headline { font-size: var(--step-display); line-height: .92; letter-spacing: -0.035em; font-weight: 700; }
+.hero-bottom { background: var(--navy); color: var(--paper); min-height: 48svh; padding-top: 20px; padding-bottom: 72px; display: flex; flex-direction: column; justify-content: flex-start; gap: 34px; }
+.hero-headline--2 { font-size: var(--step-display); line-height: .92; letter-spacing: -0.035em; font-weight: 700; color: var(--gold); }
+.hero-lower-grid { display: grid; grid-template-columns: 1fr; gap: 34px; }
+.hero-support { max-width: 46ch; font-size: var(--step-lead); color: var(--paper); opacity: .92; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
 
-    /* ── SOBRE ── */
-    .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start; }
-    .about-text p { color: #94A3B8; font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
-    .about-side { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px; }
-    .about-side-title { font-size: 12px; font-family: var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
-    .about-timeline-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
-    .about-timeline-item:last-child { border-bottom: none; }
-    .about-timeline-year { font-family: var(--mono); color: var(--accent); flex-shrink: 0; width: 56px; }
-    .about-timeline-what { color: #94A3B8; }
-    .about-timeline-what strong { color: var(--text); }
+/* ============ FEATURES (capabilities at poster scale) ============ */
+.features { background: var(--paper); color: var(--navy); padding-top: clamp(72px,10vh,120px); padding-bottom: clamp(72px,10vh,120px); }
+.feat-row { display: grid; grid-template-columns: 1fr; gap: 6px; padding: 18px 0; border: none; transition: opacity .25s; }
+.feat-row .feat-name { font-size: var(--step-display); font-weight: 600; line-height: 1.02; letter-spacing: -0.02em; }
+.feat-row .feat-desc { font-size: var(--step-body); color: var(--navy); opacity: .72; max-width: 46ch; }
+@media (min-width: 820px) {
+  .feat-row { grid-template-columns: 8fr 4fr; align-items: baseline; gap: 24px; padding: 14px 0; }
+  .features-list:hover .feat-row { opacity: .4; }
+  .features-list .feat-row:hover { opacity: 1; }
+}
+.features-head { font-size: var(--step-display); font-weight: 600; color: var(--navy); opacity: .5; padding-bottom: 18px; margin-bottom: 8px; }
 
-    /* ── FOOTER ── */
-    footer { border-top: 1px solid var(--border); padding: 64px clamp(24px, 8vw, 140px); display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; }
-    .footer-name { font-size: 20px; font-weight: 700; }
-    .footer-contact { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .footer-contact a { display: flex; align-items: center; gap: 8px; color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s; }
-    .footer-contact a:hover { color: var(--text); }
-    .footer-copy { font-size: 12px; color: var(--muted); }
-    .wa-cta { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #fff; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; transition: opacity .2s, transform .2s; }
-    .wa-cta:hover { opacity: .88; transform: translateY(-1px); }
+/* ============ SHOWCASE (output index, live sheet, adapted) ============ */
+.showcase { background: var(--gold); color: var(--navy); padding-top: clamp(64px,9vh,100px); padding-bottom: clamp(64px,9vh,100px); }
+.showcase-head { font-size: var(--step-head); max-width: 16ch; margin-bottom: 44px; }
+.showcase-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+@media (min-width: 980px) { .showcase-grid { grid-template-columns: 5fr 7fr; gap: 56px; align-items: start; } }
+.showcase-names { display: flex; flex-direction: column; }
+.showcase-names button { text-align: left; font-size: var(--step-lead); font-weight: 600; padding: 13px 0; color: var(--navy); opacity: .5; transition: opacity .2s; line-height: 1.15; border-top: none; }
+.showcase-names button[aria-pressed="true"] { opacity: 1; }
+.showcase-names button:hover { opacity: .85; }
+.showcase-names .ex-sub { display: block; font-size: var(--step-small); font-weight: 400; opacity: .8; margin-top: 2px; }
+.showcase-stage { background: #EDD4A0; border-radius: 0; min-height: 420px; padding: 28px; display: flex; flex-direction: column; gap: 16px; overflow: hidden; }
+.showcase-stage figure { margin: 0; border-radius: 4px; overflow: hidden; background: var(--navy); }
+.showcase-stage img { width: 100%; height: auto; display: block; transition: opacity .25s ease; }
+.showcase-cap { color: var(--navy); font-size: var(--step-small); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.showcase-cap a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.showcase-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; }
+.showcase-thumbs img { width: 100%; height: 130px; object-fit: cover; object-position: top; border-radius: 3px; opacity: .55; transition: opacity .2s; }
+.showcase-thumbs button[aria-pressed="true"] img { opacity: 1; }
+@media (max-width: 979px) {
+  .showcase-names { flex-direction: row; flex-wrap: wrap; gap: 10px; }
+  .showcase-names button { flex: 0 0 auto; font-size: 16px; padding: 10px 16px; background: rgba(12,44,75,.08); border-radius: 999px; }
+  .showcase-names .ex-sub { display: none; }
+}
 
-    .reveal { opacity: 0; transform: translateY(24px); }
-    .service-card, .example-card, .price-card { opacity: 0; transform: translateY(24px); }
+/* ============ HOW IT WORKS (a medida, two fields) ============ */
+.custom-wrap { display: grid; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .custom-wrap { grid-template-columns: 1fr 1fr; } }
+.custom-panel { padding: clamp(56px,8vh,96px) var(--margin); display: flex; flex-direction: column; gap: 22px; min-height: 86svh; }
+.custom-panel.c-navy { background: var(--navy); color: var(--paper); }
+.custom-panel.c-green { background: var(--green); color: var(--paper); }
+.custom-panel h3 { font-size: var(--step-head); max-width: 12ch; }
+.custom-panel p { font-size: var(--step-body); opacity: .9; max-width: 46ch; }
+.custom-panel ol { display: flex; flex-direction: column; gap: 10px; counter-reset: step; max-width: 46ch; }
+.custom-panel ol li { font-size: var(--step-body); opacity: .92; padding-left: 0; }
+.custom-panel ol li strong { font-weight: 600; opacity: 1; }
+.custom-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.custom-tags span { font-size: var(--step-small); font-weight: 600; padding: 7px 14px; background: rgba(255,255,255,.14); border-radius: 999px; }
+.custom-cta { margin-top: auto; padding-top: 8px; }
 
-    /* ── NAV MOBILE ── */
-    .nav-toggle { display: none; background: none; border: none; cursor: pointer; width: 32px; height: 32px; flex-direction: column; justify-content: center; gap: 5px; padding: 0; }
-    .nav-toggle span { display: block; height: 2px; width: 100%; background: var(--text); border-radius: 2px; transition: transform .25s, opacity .25s; }
-    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu { position: fixed; top: 64px; left: 0; right: 0; bottom: 0; z-index: 99; background: rgba(13,15,20,0.98); backdrop-filter: blur(12px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; transform: translateY(-12px); opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
-    .mobile-menu.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
-    .mobile-menu a { color: var(--text); text-decoration: none; font-size: 20px; font-weight: 600; }
-    .mobile-menu .nav-cta { margin-top: 12px; }
+/* ============ PRICING (the ticket, interactive) ============ */
+.pricing { background: var(--paper); color: var(--navy); padding-top: clamp(72px,10vh,120px); padding-bottom: clamp(72px,10vh,120px); display: flex; flex-direction: column; align-items: center; gap: 40px; }
+.pricing-head { font-size: var(--step-head); align-self: flex-start; margin-left: var(--margin); }
+.ticket { width: min(880px, calc(100% - 2 * var(--margin))); background: var(--navy); color: var(--paper); display: grid; grid-template-columns: 1fr; border-radius: 4px; position: relative; overflow: hidden; }
+@media (min-width: 760px) { .ticket { grid-template-columns: 7fr 3fr; } }
+.ticket-main { padding: 36px 36px 30px; display: flex; flex-direction: column; gap: 20px; }
+.ticket-stub { padding: 30px 32px; background: rgba(255,255,255,.06); display: flex; flex-direction: column; gap: 16px; justify-content: space-between; }
+.ticket-title { font-size: var(--step-head); font-weight: 700; }
+.mode-toggle { display: inline-flex; border: 1.5px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px; gap: 4px; align-self: flex-start; }
+.mode-toggle button { font-size: var(--step-small); font-weight: 600; padding: 7px 16px; border-radius: 999px; color: var(--paper); opacity: .6; }
+.mode-toggle button[aria-pressed="true"] { background: var(--gold); color: var(--navy); opacity: 1; }
+.svc-list { display: flex; flex-direction: column; gap: 10px; }
+.svc-row { display: flex; align-items: center; gap: 12px; font-size: var(--step-body); cursor: pointer; }
+.svc-row input { width: 18px; height: 18px; accent-color: var(--gold); flex-shrink: 0; }
+.svc-row .svc-price { margin-left: auto; font-variant-numeric: tabular-nums; opacity: .7; font-size: var(--step-small); }
+.ticket-note { font-size: var(--step-small); opacity: .7; }
+.ticket-price { font-size: clamp(32px, 5vw, 48px); font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.ticket-price span { font-size: var(--step-small); font-weight: 500; opacity: .7; display: block; margin-top: 6px; }
+.pricing-foot { max-width: 60ch; text-align: left; font-size: var(--step-small); color: var(--navy); opacity: .72; margin-left: var(--margin); margin-right: var(--margin); }
+.pricing-foot strong { color: var(--navy); }
 
-    /* ── BACK TO TOP ── */
-    .back-to-top { position: fixed; bottom: 28px; right: 28px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #0D0F14; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .25s, transform .25s; }
-    .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
-    .back-to-top:hover { opacity: .88; }
+/* ============ ABOUT (side facts, wide paragraph) ============ */
+.about { background: var(--green); color: var(--paper); padding-top: clamp(80px,11vh,130px); padding-bottom: clamp(80px,11vh,130px); }
+.about-head { font-size: var(--step-head); max-width: 16ch; margin-bottom: 44px; }
+.about-facts { display: flex; flex-wrap: wrap; gap: 32px; margin-bottom: 40px; }
+.about-facts div { min-width: 150px; }
+.about-facts .fl { font-size: var(--step-small); opacity: .65; margin-bottom: 4px; }
+.about-facts .fv { font-size: var(--step-body); font-weight: 600; }
+.about-para { font-size: var(--step-lead); line-height: 1.5; max-width: 58ch; }
+.about-record { margin-top: 64px; display: grid; grid-template-columns: 1fr; gap: 10px 48px; }
+@media (min-width: 760px) { .about-record { grid-template-columns: 140px 1fr 1fr; align-items: start; } }
+.about-record .rec-label { font-size: var(--step-small); opacity: .65; }
+.about-record .rec-col { display: flex; flex-direction: column; gap: 10px; }
+.about-record .rec-item { display: flex; justify-content: space-between; gap: 20px; font-size: var(--step-small); background: rgba(255,255,255,.07); padding: 10px 14px; border-radius: 3px; }
+.about-record .rec-item .y { opacity: .6; }
 
-    /* ── COOKIE BANNER ── */
-    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 95; background: var(--surface); border-top: 1px solid var(--border); padding: 20px clamp(20px,5vw,60px); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; transform: translateY(100%); transition: transform .3s; }
-    .cookie-banner.visible { transform: translateY(0); }
-    .cookie-text { font-size: 13px; color: #94A3B8; max-width: 640px; line-height: 1.5; }
-    .cookie-text a { color: var(--accent); }
-    .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
-    .btn-cookie-accept { background: var(--accent); color: #0D0F14; border: none; padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
-    .btn-cookie-reject { background: none; border: 1px solid var(--border); color: var(--text); padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; }
+/* ============ FOOTER ============ */
+footer.site-footer { background: var(--navy); color: var(--paper); padding: clamp(64px,10vh,110px) var(--margin) 44px; display: flex; flex-direction: column; gap: 56px; }
+.footer-mark { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.footer-mark img { width: clamp(56px,7vw,88px); height: auto; filter: invert(1) brightness(2); }
+.footer-mark .fname { font-size: clamp(26px, 3.4vw, 42px); font-weight: 700; letter-spacing: -0.02em; }
+.footer-cta-row { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+.footer-cols { display: grid; grid-template-columns: 1fr; gap: 28px; }
+@media (min-width: 700px) { .footer-cols { grid-template-columns: 1fr 1fr; } }
+.footer-col a { display: block; font-size: var(--step-body); opacity: .78; padding: 5px 0; transition: opacity .16s; }
+.footer-col a:hover { opacity: 1; }
+.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: var(--step-small); opacity: .55; margin-top: 12px; }
 
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .nav-cta { display: none; }
-      .nav-toggle { display: flex; }
-      .hero-inner { flex-shrink: 1; width: 100%; max-width: 100%; min-width: 0; }
-      .pricing-grid { grid-template-columns: 1fr; }
-      .custom-grid { grid-template-columns: 1fr; }
-      .custom-card { padding: 28px; }
-      .about-grid { grid-template-columns: 1fr; gap: 32px; }
-    }
-  </style>
+/* ============ cookie banner + back to top (flat, no glass) ============ */
+.cookie-banner { position: fixed; right: 20px; bottom: 20px; z-index: 95; width: min(260px, calc(100vw - 40px)); background: var(--navy); color: var(--paper); padding: 16px; border-radius: 4px; display: flex; flex-direction: column; gap: 12px; transform: translateY(calc(100% + 20px)); transition: transform .3s var(--ease-out); }
+.cookie-banner.visible { transform: translateY(0); }
+.cookie-text, .cookie-text-short { font-size: var(--step-small); opacity: .85; line-height: 1.5; }
+.cookie-text a, .cookie-text-short a { text-decoration: underline; }
+.cookie-text-short { display: none; }
+.cookie-actions { display: flex; gap: 10px; }
+@media (max-width: 480px) {
+  .cookie-banner { right: 12px; bottom: 12px; padding: 10px; gap: 0; width: auto; flex-direction: row; align-items: center; }
+  .cookie-text, .cookie-text-short { display: none; }
+  .cookie-actions { gap: 8px; }
+  .btn-cookie-accept, .btn-cookie-reject { padding: 8px 14px; }
+}
+.btn-cookie-accept { background: var(--gold); color: var(--navy); border: none; padding: 9px 16px; border-radius: 999px; font-size: var(--step-small); font-weight: 600; }
+.btn-cookie-reject { background: none; border: 1.5px solid rgba(255,255,255,.35); color: var(--paper); padding: 9px 16px; border-radius: 999px; font-size: var(--step-small); font-weight: 500; }
+
+.back-to-top { position: fixed; bottom: 28px; left: 28px; z-index: 90; width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: var(--paper); display: flex; align-items: center; justify-content: center; font-size: 18px; opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .25s, transform .25s; }
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { opacity: .85; }
+
+/* ============ moving picture: slow drift on the showcase screenshot ============ */
+@media (prefers-reduced-motion: no-preference) {
+  .showcase-stage figure img { animation: ad-drift 14s ease-in-out infinite alternate; }
+  @keyframes ad-drift { from { transform: scale(1.0); } to { transform: scale(1.045); } }
+}
+</style>
 </head>
 <body>
 
-  <nav>
-    <a href="#hero" class="nav-logo"><img src="assets/logo.png" alt="Las Flores Software" /> lasflores.software</a>
-    <ul class="nav-links">
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#a-medida">A medida</a></li>
-      <li><a href="#ejemplos">Ejemplos</a></li>
-      <li><a href="#precios">Precios</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-    </ul>
-    <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank" class="nav-cta">Consultar</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+<header class="sitenav">
+  <a href="#hero" class="nav-word"><img src="assets/logo.png" alt="Las Flores Software" /> lasflores.software</a>
+  <nav class="nav-links">
+    <a class="nav-link" href="#servicios">Servicios</a>
+    <a class="nav-link" href="#ejemplos">Ejemplos</a>
+    <a class="nav-link" href="#a-medida">A medida</a>
+    <a class="nav-link" href="#sobre">Sobre</a>
+    <a class="nav-btn" href="#precios">Pedir presupuesto</a>
   </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="#servicios">Servicios</a>
-    <a href="#a-medida">A medida</a>
-    <a href="#ejemplos">Ejemplos</a>
-    <a href="#precios">Precios</a>
-    <a href="#sobre">Sobre mí</a>
-    <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank" class="nav-cta">Consultar</a>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#servicios">Servicios</a>
+  <a href="#ejemplos">Ejemplos</a>
+  <a href="#a-medida">A medida</a>
+  <a href="#precios">Precios</a>
+  <a href="#sobre">Sobre mí</a>
+  <a class="nav-btn" href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank">Hablar por WhatsApp</a>
+</div>
+
+<button class="back-to-top" id="back-to-top" aria-label="Volver arriba">↑</button>
+
+<div class="cookie-banner" id="cookie-banner">
+  <p class="cookie-text">Usamos cookies solo para entender cómo se usa el sitio (Google Analytics). No vendemos ni compartimos tus datos. Ver <a href="privacidad.html">Política de Privacidad</a>.</p>
+  <p class="cookie-text-short">Usamos cookies para medir visitas. <a href="privacidad.html">Más info</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn-cookie-reject" id="cookie-reject">Rechazar</button>
+    <button class="btn-cookie-accept" id="cookie-accept">Aceptar</button>
   </div>
+</div>
 
-  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">↑</button>
-
-  <div class="cookie-banner" id="cookie-banner">
-    <p class="cookie-text">Usamos cookies solo para entender cómo se usa el sitio (Google Analytics). No vendemos ni compartimos tus datos. Ver <a href="privacidad.html">Política de Privacidad</a>.</p>
-    <div class="cookie-actions">
-      <button class="btn-cookie-reject" id="cookie-reject">Rechazar</button>
-      <button class="btn-cookie-accept" id="cookie-accept">Aceptar</button>
+<!-- ============ HERO (two fields, one section) ============ -->
+<section id="hero">
+  <div class="hero-top field pad" data-ink="#0C2C4B">
+    <h1 class="hero-headline" data-reveal>Software real,</h1>
+  </div>
+  <div class="hero-bottom field pad" data-ink="#EFEFEC">
+    <p class="hero-headline--2" data-reveal>precio de pueblo.</p>
+    <div class="hero-lower-grid">
+      <div>
+        <p class="hero-support" data-reveal>Sitios, tiendas y sistemas a medida: reservas, turnos, entradas, consulta de precios. Ya funcionando en negocios de Las Flores. Hosting gratis para siempre, sin letra chica.</p>
+        <div class="hero-ctas" data-reveal style="margin-top:34px">
+          <a href="#precios" class="btn btn--on-navy">Ver precios</a>
+          <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank" class="text-link" style="color:var(--paper)">Hablemos por WhatsApp →</a>
+        </div>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-grid-bg"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-inner">
-      <div class="hero-tag" id="hero-tag">Hecho en Las Flores, Buenos Aires</div>
-      <h1 class="hero-title" id="hero-title">Tu negocio, <span>online y funcionando.</span></h1>
-      <p class="hero-desc" id="hero-desc">
-        Sitios web, tiendas online y sistemas a medida — reservas, turnos, venta de entradas, consulta de
-        precios — para negocios que quieren crecer. Pago único para siempre, o mensual si recién arrancás.
-        Hosting gratis, sin letra chica.
-      </p>
-      <div class="hero-ctas" id="hero-ctas">
-        <a href="#servicios" class="btn-primary">Ver servicios</a>
-        <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank" class="btn-ghost">Hablemos por WhatsApp →</a>
-      </div>
-      <div class="hero-stats" id="hero-stats">
-        <div><div class="hero-stat-num">$0</div><div class="hero-stat-label">de hosting, para siempre</div></div>
-        <div><div class="hero-stat-num">7</div><div class="hero-stat-label">servicios combinables</div></div>
-        <div><div class="hero-stat-num">7+</div><div class="hero-stat-label">años construyendo software</div></div>
+<!-- ============ SERVICIOS (capabilities at poster scale) ============ -->
+<section id="servicios" class="features field pad" data-ink="#0C2C4B">
+  <div class="features-list">
+    <p class="features-head">Elegí el servicio</p>
+
+    <div class="feat-row" data-reveal>
+      <div class="feat-name">Landing</div>
+      <div class="feat-desc">Tu página profesional, con tu logo, tus fotos y un botón directo a WhatsApp.</div>
+    </div>
+    <div class="feat-row" data-reveal>
+      <div class="feat-name">Tienda online</div>
+      <div class="feat-desc">Catálogo con carrito que arma el pedido por WhatsApp, sin comisión por venta.</div>
+    </div>
+    <div class="feat-row" data-reveal>
+      <div class="feat-name">Hotel</div>
+      <div class="feat-desc">El huésped reserva fechas online; vos confirmás desde un panel de recepción.</div>
+    </div>
+    <div class="feat-row" data-reveal>
+      <div class="feat-name">Turnos</div>
+      <div class="feat-desc">Horarios libres calculados solos, nunca se pisan dos reservas del mismo turno.</div>
+    </div>
+    <div class="feat-row" data-reveal>
+      <div class="feat-name">Entradas</div>
+      <div class="feat-desc">Cada ticket vendido genera un QR único, validado una sola vez en la puerta.</div>
+    </div>
+    <div class="feat-row" data-reveal>
+      <div class="feat-name">Consulta de precios</div>
+      <div class="feat-desc">Pantalla con lector de código de barras: el cliente ve el precio sin ir a la caja.</div>
+    </div>
+    <div class="feat-row" data-reveal>
+      <div class="feat-name">QR Menú</div>
+      <div class="feat-desc">Un QR en la mesa abre tu carta digital, siempre actualizada, sin reimprimir nada.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EJEMPLOS (output index, live sheet, adapted) ============ -->
+<section id="ejemplos" class="showcase field pad" data-ink="#0C2C4B">
+  <h2 class="showcase-head" data-reveal>Software que ya funciona.</h2>
+  <div class="showcase-grid" data-reveal>
+    <div>
+      <div class="showcase-names" id="ex-names" role="tablist" aria-label="Ejemplos reales"></div>
+      <div class="showcase-thumbs" id="ex-thumbs"></div>
+    </div>
+    <div class="showcase-stage">
+      <figure>
+        <img id="ex-img" src="assets/examples/cattorini.jpg" alt="Cattorini: panel de tienda textil mayorista y minorista" width="1440" height="900" />
+      </figure>
+      <div class="showcase-cap">
+        <span id="ex-cap">Cattorini, indumentaria masculina en Las Flores desde 1959. Mayorista y minorista, stock por talle y color, pago con QR.</span>
+        <a id="ex-link" href="https://cattorinioriginal.com/" target="_blank" rel="noopener">Ver sitio real →</a>
       </div>
     </div>
-    <div class="hero-logo-wrap" id="hero-logo">
-      <div class="hero-logo-glow"></div>
-      <img src="assets/logo.png" alt="Las Flores Software — logo" />
+  </div>
+  <noscript>
+    <div class="showcase-grid" style="margin-top:32px">
+      <ul style="display:flex;flex-direction:column;gap:14px;font-size:17px;">
+        <li><a href="https://cattorinioriginal.com/" target="_blank">Cattorini, mayorista/minorista desde 1959 (sitio real) →</a></li>
+        <li><a href="https://elsabordemama.github.io/tienda.html" target="_blank">El Sabor de Mamá, catálogo de empanadas (sitio real) →</a></li>
+        <li><a href="https://juliancarroccio.github.io/pushcommerce/pages/el_progreso/panel.html" target="_blank">El Progreso, panel de precios del dueño (demo) →</a></li>
+        <li><a href="https://juliancarroccio.github.io/pushcommerce/pages/el_progreso/consulta.html" target="_blank">El Progreso, consulta en kiosko (demo) →</a></li>
+        <li><a href="https://juliancarroccio.github.io/pushcommerce/pages/hotel_los_aromos/" target="_blank">Hotel Los Aromos, reservas (demo) →</a></li>
+        <li><a href="https://juliancarroccio.github.io/pushcommerce/pages/la_usina/agenda.html" target="_blank">La Usina, reservá tu lugar (demo) →</a></li>
+        <li><a href="https://juliancarroccio.github.io/pushcommerce/pages/la_usina/evento.html" target="_blank">La Usina, entradas con QR (demo) →</a></li>
+        <li><a href="https://juliancarroccio.github.io/pushcommerce/pages/la_usina/menu.html" target="_blank">La Usina, carta con QR en la mesa (demo) →</a></li>
+        <li><a href="https://juliancarroccio.github.io/pushcommerce/pages/almacen_del_pago/" target="_blank">Almacén del Pago, catálogo y pedido (demo) →</a></li>
+      </ul>
     </div>
-  </section>
+  </noscript>
+</section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios">
-    <p class="section-label reveal">// servicios</p>
-    <h2 class="section-title reveal">Elegís los que tu negocio necesita</h2>
-    <p class="section-sub reveal">Cada uno se contrata por separado y se combinan entre sí — un mismo panel para administrar todo lo que tengas activo, sin depender de nadie para hacer cambios.</p>
-    <div class="services-grid">
-
-      <div class="service-card">
-        <div class="service-icon">🌐</div>
-        <div class="service-name">Landing</div>
-        <div class="service-pitch">Existí en internet, de verdad</div>
-        <p class="service-desc">Tu página profesional, con tu logo y tus colores. La puerta de entrada para cualquier otro servicio.</p>
-        <ul class="service-features">
-          <li>Mapa, horarios en vivo, galería de fotos</li>
-          <li>Optimizada para mobile y buscadores</li>
-          <li>Botón directo a WhatsApp</li>
-        </ul>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🛒</div>
-        <div class="service-name">Tienda online</div>
-        <div class="service-pitch">Vendé sin depender de nadie</div>
-        <p class="service-desc">Catálogo con carrito que arma el pedido por WhatsApp. Desde lo simple hasta un panel con stock en vivo.</p>
-        <ul class="service-features">
-          <li>Carrito → WhatsApp, sin comisión por venta</li>
-          <li>Panel para vos, editá precios y stock vos mismo</li>
-          <li>Venta mayorista/minorista si la necesitás</li>
-          <li>Opcional: cobro online con MercadoPago, el pedido se confirma solo</li>
-        </ul>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🏨</div>
-        <div class="service-name">Hotel</div>
-        <div class="service-pitch">Reservas sin depender de Booking</div>
-        <p class="service-desc">El huésped elige fechas y reserva online. Vos confirmás desde un panel de recepción, sin pagar comisión.</p>
-        <ul class="service-features">
-          <li>Calendario de disponibilidad en vivo</li>
-          <li>Confirmación instantánea o manual, a elección</li>
-          <li>Panel de check-in / check-out</li>
-        </ul>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">✂️</div>
-        <div class="service-name">Turnos</div>
-        <div class="service-pitch">Cero ida y vuelta por WhatsApp</div>
-        <p class="service-desc">Peluquería, consultorio, restaurant — el cliente ve los horarios libres y reserva solo, al instante.</p>
-        <ul class="service-features">
-          <li>Horarios libres calculados automáticamente</li>
-          <li>Nunca se pisan dos reservas del mismo turno</li>
-          <li>Código para que el cliente consulte su turno</li>
-        </ul>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🎟️</div>
-        <div class="service-name">Entradas / Eventos</div>
-        <div class="service-pitch">Vendé tu evento sin ticketera</div>
-        <p class="service-desc">Cada entrada vendida genera un QR único. Se valida una sola vez en la puerta — imposible duplicar o revender.</p>
-        <ul class="service-features">
-          <li>Cupo controlado por tipo de entrada</li>
-          <li>QR único, validación una sola vez</li>
-          <li>Sin comisión por ticketera tradicional</li>
-        </ul>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🏷️</div>
-        <div class="service-name">Consulta de precios</div>
-        <div class="service-pitch">Para negocios grandes</div>
-        <p class="service-desc">Una pantalla con lector de código de barras: el cliente escanea un producto y ve el precio al instante, sin ir a la caja.</p>
-        <ul class="service-features">
-          <li>Funciona con cualquier lector de código de barras</li>
-          <li>Sin cajero ni empleado necesario para consultar</li>
-          <li>Catálogo actualizable en cualquier momento</li>
-        </ul>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">📱</div>
-        <div class="service-name">QR Menú</div>
-        <div class="service-pitch">Para bares y restaurantes</div>
-        <p class="service-desc">Un QR en la mesa que abre tu carta digital — fotos, nombres y precios claros, pensada para consultar, no para vender con carrito.</p>
-        <ul class="service-features">
-          <li>Carta siempre actualizada, sin reimprimir nada</li>
-          <li>Se puede combinar con tienda si también vendés para llevar</li>
-          <li>Un QR distinto para la carta y otro para el pedido, si hace falta</li>
-        </ul>
-      </div>
-
+<!-- ============ A MEDIDA (two fields) ============ -->
+<section id="a-medida" class="custom-wrap" data-ink="#EFEFEC">
+  <div class="custom-panel c-navy">
+    <h3 data-reveal>Software a medida</h3>
+    <p data-reveal>Le sumo funcionalidad a lo que ya usás, o creo el sistema desde cero: paneles de gestión, integraciones, automatizaciones, apps web.</p>
+    <ol data-reveal>
+      <li><strong>Entendemos el problema</strong>: qué hacés hoy a mano y qué querés resolver.</li>
+      <li><strong>Propuesta y presupuesto</strong>: alcance claro antes de empezar.</li>
+      <li><strong>Desarrollo con pruebas</strong>: con tests automatizados, no "a ojo".</li>
+      <li><strong>Entrega y soporte</strong>: funcionando en tu negocio, con ajustes incluidos.</li>
+    </ol>
+    <div class="custom-cta" data-reveal>
+      <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20quiero%20consultar%20por%20software%20a%20medida" target="_blank" class="btn btn--outline">Contame tu idea →</a>
     </div>
-  </section>
-
-  <!-- A MEDIDA -->
-  <section id="a-medida">
-    <p class="section-label reveal">// a medida</p>
-    <h2 class="section-title reveal">¿Necesitás algo que no está en la lista?</h2>
-    <p class="section-sub reveal">Además de los servicios listos para usar, diseño software y hardware a medida — desde sumarle una funcionalidad a lo que ya tenés hasta crear un producto completo desde cero.</p>
-    <div class="custom-grid">
-
-      <div class="custom-card reveal">
-        <div class="service-icon">💻</div>
-        <h3>Software a medida</h3>
-        <p>Sistemas pensados para cómo trabaja tu negocio, no al revés. Le agrego funcionalidades a lo que ya usás o creo el software desde cero: paneles de gestión, integraciones, automatizaciones, apps web.</p>
-        <ul class="custom-steps">
-          <li><span><strong>Entendemos el problema</strong> — qué hacés hoy a mano y qué querés resolver.</span></li>
-          <li><span><strong>Propuesta y presupuesto</strong> — alcance claro antes de empezar.</span></li>
-          <li><span><strong>Desarrollo con pruebas</strong> — con tests automatizados, no "a ojo".</span></li>
-          <li><span><strong>Entrega y soporte</strong> — funcionando en tu negocio, con ajustes incluidos.</span></li>
-        </ul>
-        <div class="custom-cta">
-          <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20quiero%20consultar%20por%20software%20a%20medida" target="_blank" class="btn-ghost">Contame tu idea →</a>
-        </div>
-      </div>
-
-      <div class="custom-card reveal">
-        <div class="service-icon">🔧</div>
-        <h3>Hardware a medida</h3>
-        <p>Dispositivos electrónicos con ESP32 y Arduino, de la idea al producto instalado: sensores, controles, automatización, pantallas, equipos conectados a internet.</p>
-        <ul class="custom-steps">
-          <li><span><strong>Idea</strong> — definimos qué tiene que hacer el dispositivo.</span></li>
-          <li><span><strong>Diseño</strong> — electrónica y gabinete pensados para el uso real.</span></li>
-          <li><span><strong>Impresión 3D</strong> — con filamentos técnicos, resistentes al uso y al calor.</span></li>
-          <li><span><strong>Programación</strong> — firmware a medida, con conexión WiFi si hace falta.</span></li>
-          <li><span><strong>Instalación</strong> — lo dejo funcionando en tu lugar.</span></li>
-        </ul>
-        <div class="custom-tags">
-          <span class="custom-tag">ESP32</span><span class="custom-tag">Arduino</span><span class="custom-tag">Impresión 3D</span><span class="custom-tag">IoT</span>
-        </div>
-        <div class="custom-cta">
-          <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20quiero%20consultar%20por%20hardware%20a%20medida" target="_blank" class="btn-ghost">Contame tu idea →</a>
-        </div>
-      </div>
-
+  </div>
+  <div class="custom-panel c-green">
+    <h3 data-reveal>Hardware a medida</h3>
+    <p data-reveal>ESP32 y Arduino, de la idea al producto instalado: sensores, controles, pantallas, equipos conectados a internet.</p>
+    <ol data-reveal>
+      <li><strong>Idea</strong>: definimos qué tiene que hacer el dispositivo.</li>
+      <li><strong>Diseño</strong>: electrónica y gabinete pensados para el uso real.</li>
+      <li><strong>Impresión 3D</strong>: con filamentos técnicos, resistentes al uso y al calor.</li>
+      <li><strong>Programación</strong>: firmware a medida, con conexión WiFi si hace falta.</li>
+      <li><strong>Instalación</strong>: lo dejo funcionando en tu lugar.</li>
+    </ol>
+    <div class="custom-tags" data-reveal>
+      <span>ESP32</span><span>Arduino</span><span>Impresión 3D</span><span>IoT</span>
     </div>
-  </section>
-
-  <!-- EJEMPLOS -->
-  <section id="ejemplos">
-    <p class="section-label reveal">// ejemplos reales</p>
-    <h2 class="section-title reveal">Así se ve en la práctica</h2>
-    <p class="section-sub reveal">Negocios reales de Las Flores funcionando en vivo, más demos con datos de prueba para los servicios que todavía no tienen un cliente real — todo funcionando de verdad, nada es una maqueta estática.</p>
-    <div class="examples-grid">
-
-      <a href="https://juliancarroccio.github.io/pushcommerce/pages/almacen_del_pago/" target="_blank" class="example-card">
-        <span class="example-badge">Demo · Landing + Tienda</span>
-        <span class="example-name">Almacén del Pago</span>
-        <p class="example-desc">Fiambrería y quesería (datos de prueba) — landing con catálogo y pedido directo por WhatsApp.</p>
-        <span class="example-link">Ver sitio →</span>
-      </a>
-
-      <a href="https://cattorinioriginal.com/" target="_blank" class="example-card">
-        <span class="example-badge">Panel completo</span>
-        <span class="example-name">Cattorini</span>
-        <p class="example-desc">Textil — el más completo: stock por talle y color, mayorista/minorista, pago QR, seguimiento de pedido.</p>
-        <span class="example-link">Ver sitio →</span>
-      </a>
-
-      <a href="https://juliancarroccio.github.io/pushcommerce/pages/hotel_los_aromos/" target="_blank" class="example-card">
-        <span class="example-badge">Demo · Hotel</span>
-        <span class="example-name">Hotel Los Aromos</span>
-        <p class="example-desc">Hotel (datos de prueba) — reservas por fecha con calendario de disponibilidad y panel de recepción.</p>
-        <span class="example-link">Ver sitio →</span>
-      </a>
-
-      <a href="https://elsabordemama.github.io/" target="_blank" class="example-card">
-        <span class="example-badge">Panel + Pedidos</span>
-        <span class="example-name">El Sabor de Mamá</span>
-        <p class="example-desc">Empanadas — pedidos con seguimiento por código y cola de preparación en vivo.</p>
-        <span class="example-link">Ver sitio →</span>
-      </a>
-
-      <a href="https://juliancarroccio.github.io/pushcommerce/pages/la_usina/agenda.html" target="_blank" class="example-card">
-        <span class="example-badge">Demo · Turnos</span>
-        <span class="example-name">La Usina — Reservá tu lugar</span>
-        <p class="example-desc">Bar cultural (datos de prueba) — elegí mesa para la noche de show o el privado para eventos, horarios libres calculados en vivo.</p>
-        <span class="example-link">Ver demo →</span>
-      </a>
-
-      <a href="https://juliancarroccio.github.io/pushcommerce/pages/la_usina/evento.html" target="_blank" class="example-card">
-        <span class="example-badge">Demo · Entradas</span>
-        <span class="example-name">La Usina — Noche de Blues</span>
-        <p class="example-desc">Compra de entradas (datos de prueba) con QR único por comprador — validación de un solo uso en la puerta.</p>
-        <span class="example-link">Ver demo →</span>
-      </a>
-
-      <a href="https://juliancarroccio.github.io/pushcommerce/pages/la_usina/qr.html" target="_blank" class="example-card">
-        <span class="example-badge">Demo · QR Menú</span>
-        <span class="example-name">La Usina — Carta</span>
-        <p class="example-desc">El QR imprimible para la mesa — escaneado (o con un clic) abre la carta digital, sin carrito, solo para consultar.</p>
-        <span class="example-link">Ver demo →</span>
-      </a>
-
-      <a href="https://juliancarroccio.github.io/pushcommerce/pages/el_progreso/consulta.html" target="_blank" class="example-card">
-        <span class="example-badge">Demo · Consulta de precios</span>
-        <span class="example-name">El Progreso — Pantalla de kiosko</span>
-        <p class="example-desc">Supermercado (datos de prueba) — escaneá o tipeá un código de barras y ves el precio al instante, sin cajero.</p>
-        <span class="example-link">Ver demo →</span>
-      </a>
-
-      <a href="https://juliancarroccio.github.io/pushcommerce/pages/el_progreso/panel.html" target="_blank" class="example-card">
-        <span class="example-badge">Demo · Panel del dueño</span>
-        <span class="example-name">El Progreso — Carga de productos</span>
-        <p class="example-desc">El panel con el que el dueño da de alta, edita y borra productos y precios — lo que cargás acá aparece al instante en la pantalla de consulta.</p>
-        <span class="example-link">Ver demo →</span>
-      </a>
-
+    <div class="custom-cta" data-reveal>
+      <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20quiero%20consultar%20por%20hardware%20a%20medida" target="_blank" class="btn btn--outline">Contame tu idea →</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PRECIOS -->
-  <section id="precios">
-    <p class="section-label reveal">// precios</p>
-    <h2 class="section-title reveal">Simple, por servicio</h2>
-    <p class="section-sub reveal">Elegís cuántos servicios querés y cómo pagarlos. Sin letra chica, sin sorpresas.</p>
-    <div class="pricing-grid">
+<!-- ============ PRECIOS (the ticket, interactive) ============ -->
+<section id="precios" class="pricing field" data-ink="#0C2C4B">
+  <h2 class="pricing-head" data-reveal>Simple, por servicio</h2>
 
-      <div class="price-card price-card--featured">
-        <div class="price-label">Pago único</div>
-        <div class="price-amount">US$70 <span>por servicio</span></div>
-        <p class="price-desc">Es tuyo para siempre. Autoadministrado, costo $0 de hosting, dominio a tu elección, soporte técnico gratis ante cualquier caída. Cambios de funcionalidad post-entrega: US$8 de canon por cambio.</p>
-        <p class="price-for">Ideal si tu negocio ya funciona y querés escalar</p>
+  <div class="ticket" data-reveal data-ui>
+    <div class="ticket-main">
+      <div class="ticket-title">Armá tu combinación</div>
+      <div class="mode-toggle" role="group" aria-label="Forma de pago">
+        <button type="button" data-mode="unico" aria-pressed="true">Pago único</button>
+        <button type="button" data-mode="mensual" aria-pressed="false">Mensual</button>
       </div>
-
-      <div class="price-card">
-        <div class="price-label">SaaS mensual</div>
-        <div class="price-amount">US$8 <span>/mes por servicio</span></div>
-        <p class="price-desc">El mismo servicio, pagando mes a mes en vez de una vez. Cancelás cuando quieras, sin compromiso de permanencia.</p>
-        <p class="price-for">Ideal si recién arrancás o querés probar antes de comprometerte</p>
+      <div class="svc-list" id="svc-list">
+        <!-- filled by JS; noscript fallback below -->
       </div>
-
+      <p class="ticket-note">Siempre incluido: SEO básico, Google Analytics, código QR, hosting gratis para siempre.</p>
     </div>
-    <p class="pricing-note">Siempre incluido, en cualquier plan: SEO básico, Google Analytics, código QR, hosting gratis para siempre.<br>Tienda online con pago online integrado (MercadoPago): +US$20 en pago único o +US$2/mes.<br>Software y hardware a medida: se cotiza por proyecto.</p>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre">
-    <p class="section-label reveal">// quién está detrás</p>
-    <h2 class="section-title reveal">Julian Carroccio</h2>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>
-          Soy desarrollador senior con base en Las Flores, Buenos Aires — más de 7 años construyendo
-          software en empresas de escala nacional (Ualá, Link), donde aprendí que la calidad no se
-          agrega al final, se diseña desde el principio.
-        </p>
-        <p>
-          Las Flores Software nació de una idea simple: los negocios de mi pueblo no tienen por qué
-          pagar membresías mensuales a plataformas genéricas para tener presencia online. Con el mismo
-          nivel de cuidado técnico que uso en fintech, armo sitios y sistemas a medida con costo de
-          hosting real de $0 — y entrego la página ya hecha y en vivo antes de cobrar un peso.
-        </p>
-        <p>
-          Trabajo todo el stack: desde la landing más simple hasta sistemas con base de datos en vivo
-          (reservas, turnos, entradas), siempre con el mismo criterio — sin backend innecesario, sin
-          costos ocultos, sin depender de terceros para que tu negocio funcione.
-        </p>
+    <div class="ticket-stub">
+      <div>
+        <div class="ticket-price" id="ticket-price">US$70<span>pago único · 1 servicio</span></div>
       </div>
-      <div class="about-side">
-        <div class="about-side-title">Trayectoria</div>
-        <div class="about-timeline-item">
-          <span class="about-timeline-year">2025</span>
-          <span class="about-timeline-what"><strong>redbee studios</strong> · cliente Link, Adquirencia</span>
-        </div>
-        <div class="about-timeline-item">
-          <span class="about-timeline-year">2020</span>
-          <span class="about-timeline-what"><strong>Ualá</strong> · 5 años, fintech de escala nacional</span>
-        </div>
-        <div class="about-timeline-item">
-          <span class="about-timeline-year">2019</span>
-          <span class="about-timeline-what"><strong>Baufest</strong> · cliente Prisma Medios de Pago</span>
-        </div>
-        <div class="about-timeline-item">
-          <span class="about-timeline-year">2010</span>
-          <span class="about-timeline-what">Sistemas, mientras estudiaba Ing. en Informática (UNLaM)</span>
-        </div>
-      </div>
+      <a href="#" id="ticket-wa" class="btn btn--wa" target="_blank" rel="noopener">Pedir por WhatsApp</a>
     </div>
-  </section>
+  </div>
+  <noscript>
+    <p class="pricing-foot">Pago único: <strong>US$70 por servicio</strong>, para siempre, hosting $0. Mensual: <strong>US$8/mes por servicio</strong>, cancelás cuando quieras. Cobro online con MercadoPago: +US$20 (pago único) o +US$2/mes. Escribime por WhatsApp para armar tu combinación.</p>
+  </noscript>
+  <p class="pricing-foot" data-reveal>Cobro online con MercadoPago: +US$20 en pago único, o +US$2/mes. Cambios de funcionalidad post-entrega (pago único): US$8 de canon por cambio. Software y hardware a medida se cotizan por proyecto.</p>
+</section>
 
-  <!-- FOOTER -->
-  <footer id="contacto">
-    <p class="section-label">// empecemos</p>
-    <p class="footer-name">¿Charlamos sobre tu negocio?</p>
-    <p style="color: var(--muted); font-size: 14px; max-width: 420px;">
-      Respondo en menos de 24hs. Sin compromiso — primero vemos qué necesitás, después hablamos de precio.
-    </p>
-    <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank" class="wa-cta">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-      Escribime por WhatsApp
-    </a>
+<!-- ============ SOBRE (side facts, wide paragraph) ============ -->
+<section id="sobre" class="about field pad" data-ink="#EFEFEC">
+  <h2 class="about-head" data-reveal>Quién está detrás</h2>
+  <div class="about-facts" data-reveal>
+    <div><div class="fl">Basado en</div><div class="fv">Las Flores, Buenos Aires</div></div>
+    <div><div class="fl">Construyendo software</div><div class="fv">Hace 7+ años</div></div>
+    <div><div class="fl">Antes de esto</div><div class="fv">Ualá · Baufest / Prisma</div></div>
+  </div>
+  <p class="about-para" data-reveal>
+    Soy desarrollador senior, con más de siete años construyendo software en empresas de escala nacional: Ualá, Link. Las Flores Software nació de una idea simple, los negocios de mi ciudad no tienen por qué pagar membresías mensuales a plataformas genéricas para tener presencia online. Con el mismo cuidado técnico que uso en fintech, armo sitios y sistemas con costo de hosting real de $0, y entrego la página ya hecha y en vivo antes de cobrar un peso.
+  </p>
+  <div class="about-record" data-reveal>
+    <div class="rec-label">Trayectoria</div>
+    <div class="rec-col">
+      <div class="rec-item"><span>redbee studios · cliente Link, Adquirencia</span><span class="y">2025</span></div>
+      <div class="rec-item"><span>Ualá · fintech de escala nacional</span><span class="y">2020</span></div>
+    </div>
+    <div class="rec-col">
+      <div class="rec-item"><span>Baufest · cliente Prisma Medios de Pago</span><span class="y">2019</span></div>
+      <div class="rec-item"><span>Sistemas, Ing. en Informática (UNLaM)</span><span class="y">2010</span></div>
+    </div>
+  </div>
+</section>
 
-    <div class="footer-contact">
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="contacto" data-ink="#EFEFEC">
+  <div class="footer-mark" data-reveal>
+    <img src="assets/logo.png" alt="" aria-hidden="true" />
+    <div class="fname">Las Flores Software</div>
+  </div>
+  <div class="footer-cta-row" data-reveal>
+    <a href="https://wa.me/5492244472255?text=Hola%20Julian%2C%20vi%20Las%20Flores%20Software%20y%20quiero%20consultar" target="_blank" class="btn btn--wa">Escribime por WhatsApp</a>
+    <p style="max-width:40ch;opacity:.75;font-size:15px;">Respondo en menos de 24hs. Primero vemos qué necesitás, después hablamos de precio.</p>
+  </div>
+  <div class="footer-cols" data-reveal>
+    <div class="footer-col">
       <a href="mailto:juliancarroccio@gmail.com">juliancarroccio@gmail.com</a>
       <a href="https://ar.linkedin.com/in/julian-carroccio" target="_blank">LinkedIn</a>
       <a href="https://github.com/juliancarroccio" target="_blank">GitHub</a>
     </div>
-    <div class="footer-contact">
+    <div class="footer-col">
       <a href="privacidad.html">Privacidad</a>
       <a href="terminos.html">Términos</a>
       <a href="reembolsos.html">Reembolsos</a>
     </div>
-    <p class="footer-copy">© 2026 Las Flores Software · Julian Carroccio · Las Flores, Buenos Aires</p>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Las Flores Software · Julian Carroccio</span>
+    <span>Las Flores, Buenos Aires</span>
+  </div>
+</footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
+<script>
+document.documentElement.classList.add('js');
 
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.from('#hero-tag',   { opacity: 0, y: -16, duration: 0.5 })
-      .from('#hero-title', { opacity: 0, y: 40, duration: 0.7 }, '-=0.2')
-      .from('#hero-desc',  { opacity: 0, y: 24, duration: 0.6 }, '-=0.4')
-      .from('#hero-ctas',  { opacity: 0, y: 20, duration: 0.5 }, '-=0.3')
-      .from('#hero-stats', { opacity: 0, y: 16, duration: 0.5 }, '-=0.3')
-      .from('#hero-logo', { opacity: 0, scale: 0.85, duration: 0.8, ease: 'back.out(1.4)' }, '-=0.9');
+/* ---------- reveal on scroll ---------- */
+(() => {
+  const targets = document.querySelectorAll('[data-reveal]');
+  if (!('IntersectionObserver' in window)) { targets.forEach(el => el.classList.add('is-in')); return; }
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+  targets.forEach(el => io.observe(el));
+  window.addEventListener('load', () => setTimeout(() => {
+    targets.forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add('is-in'); });
+  }, 2500));
+})();
 
-    gsap.utils.toArray('.reveal').forEach(el => {
-      gsap.to(el, { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out',
-        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' } });
+/* ---------- nav móvil ---------- */
+const navToggle = document.getElementById('nav-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+function closeMobileMenu() { navToggle.classList.remove('open'); mobileMenu.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
+navToggle.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  navToggle.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
+
+/* ---------- colour by chapter: header ink follows the field beneath it ---------- */
+(() => {
+  const chapters = document.querySelectorAll('[data-ink]');
+  if (!chapters.length || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) if (entry.isIntersecting) document.documentElement.style.setProperty('--header-ink', entry.target.dataset.ink);
+  }, { rootMargin: '0px 0px -92% 0px', threshold: 0 });
+  chapters.forEach(el => io.observe(el));
+})();
+
+/* ---------- back to top ---------- */
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => backToTop.classList.toggle('visible', window.scrollY > 600));
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ---------- EJEMPLOS: real screenshots, swapped live ---------- */
+const EXAMPLES = [
+  { name: 'Cattorini', sub: 'Mayorista/minorista desde 1959', img: 'assets/examples/cattorini.jpg', alt: 'Cattorini: panel de tienda textil mayorista y minorista', cap: 'Cattorini, indumentaria masculina en Las Flores desde 1959. Mayorista y minorista, stock por talle y color, pago con QR.', link: 'https://cattorinioriginal.com/', linkLabel: 'Ver sitio real →' },
+  { name: 'El Sabor de Mamá', sub: 'Catálogo y pedido en vivo', img: 'assets/examples/el-sabor-de-mama.jpg', alt: 'El Sabor de Mamá: catálogo de empanadas con precio de docena calculado en vivo', cap: 'El Sabor de Mamá, empanadas en Las Flores. Catálogo por categoría, búsqueda y precio de docena que se recalcula solo en el carrito.', link: 'https://elsabordemama.github.io/tienda.html', linkLabel: 'Ver sitio real →' },
+  { name: 'El Progreso', sub: 'Panel de precios del dueño', img: 'assets/examples/el-progreso-panel.jpg', alt: 'El Progreso: panel para cargar y editar precios', cap: 'El Progreso (datos de prueba): el panel con el que el dueño carga, edita y borra productos. Lo que cargás acá aparece al instante en la pantalla de consulta.', link: 'https://juliancarroccio.github.io/pushcommerce/pages/el_progreso/panel.html', linkLabel: 'Ver demo →' },
+  { name: 'El Progreso', sub: 'Consulta de precios en kiosko', img: 'assets/examples/el-progreso-consulta.jpg', alt: 'El Progreso: pantalla de consulta de precios por código de barras', cap: 'El Progreso (datos de prueba): escaneás o tipeás un código de barras y ves el precio al instante, sin cajero.', link: 'https://juliancarroccio.github.io/pushcommerce/pages/el_progreso/consulta.html', linkLabel: 'Ver demo →' },
+  { name: 'Hotel Los Aromos', sub: 'Reservas por fecha', img: 'assets/examples/hotel-los-aromos.jpg', alt: 'Hotel Los Aromos: tipos de habitación y consulta de disponibilidad', cap: 'Hotel Los Aromos (datos de prueba): el huésped elige tipo de habitación y consulta disponibilidad. Vos confirmás desde el panel de recepción.', link: 'https://juliancarroccio.github.io/pushcommerce/pages/hotel_los_aromos/', linkLabel: 'Ver demo →' },
+  { name: 'La Usina', sub: 'Reservá tu lugar (turnos)', img: 'assets/examples/la-usina-agenda.jpg', alt: 'La Usina: reserva de mesa para la noche de show o el privado para eventos', cap: 'La Usina (datos de prueba): elegís el servicio, el día y el horario — mesa para la noche de show o el salón privado para eventos. Confirmado al instante.', link: 'https://juliancarroccio.github.io/pushcommerce/pages/la_usina/agenda.html', linkLabel: 'Ver demo →' },
+  { name: 'La Usina', sub: 'Entradas con QR único', img: 'assets/examples/la-usina-evento.jpg', alt: 'La Usina: compra de entradas con QR único por comprador', cap: 'La Usina (datos de prueba): compra de entradas con QR único por comprador, validado una sola vez en la puerta. Sin ticketera.', link: 'https://juliancarroccio.github.io/pushcommerce/pages/la_usina/evento.html', linkLabel: 'Ver demo →' },
+  { name: 'La Usina', sub: 'Carta con QR en la mesa', img: 'assets/examples/la-usina-qr.jpg', alt: 'La Usina: QR imprimible para la mesa, junto a la carta digital que abre al escanearlo', cap: 'La Usina (datos de prueba): el QR impreso en la mesa abre esta carta digital — tragos, cervezas y picadas con precio, sin carrito, solo para consultar.', link: 'https://juliancarroccio.github.io/pushcommerce/pages/la_usina/menu.html', linkLabel: 'Ver demo →' },
+  { name: 'Almacén del Pago', sub: 'Catálogo y pedido por WhatsApp', img: 'assets/examples/almacen-del-pago.jpg', alt: 'Almacén del Pago: catálogo de fiambrería y quesería', cap: 'Almacén del Pago (datos de prueba): fiambrería y quesería, catálogo por categoría con pedido directo armado por WhatsApp.', link: 'https://juliancarroccio.github.io/pushcommerce/pages/almacen_del_pago/', linkLabel: 'Ver demo →' },
+];
+(() => {
+  const namesWrap = document.getElementById('ex-names');
+  const thumbsWrap = document.getElementById('ex-thumbs');
+  const img = document.getElementById('ex-img');
+  const cap = document.getElementById('ex-cap');
+  const link = document.getElementById('ex-link');
+
+  function select(i) {
+    const ex = EXAMPLES[i];
+    namesWrap.querySelectorAll('button').forEach((x, xi) => x.setAttribute('aria-pressed', String(xi === i)));
+    thumbsWrap.querySelectorAll('button').forEach((x, xi) => x.setAttribute('aria-pressed', String(xi === i)));
+    img.style.opacity = 0;
+    setTimeout(() => { img.src = ex.img; img.alt = ex.alt; img.style.opacity = 1; }, 180);
+    cap.textContent = ex.cap;
+    link.href = ex.link;
+    link.textContent = ex.linkLabel;
+  }
+
+  EXAMPLES.forEach((ex, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    b.innerHTML = ex.name + '<span class="ex-sub">' + ex.sub + '</span>';
+    b.addEventListener('click', () => select(i));
+    namesWrap.appendChild(b);
+
+    const t = document.createElement('button');
+    t.type = 'button';
+    t.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    t.setAttribute('aria-label', ex.name + ', ' + ex.sub);
+    const ti = document.createElement('img');
+    ti.src = ex.img; ti.alt = ''; ti.loading = 'lazy'; ti.width = 320; ti.height = 130;
+    t.appendChild(ti);
+    t.addEventListener('click', () => select(i));
+    thumbsWrap.appendChild(t);
+  });
+})();
+
+/* ---------- PRECIOS: live calculator ---------- */
+const SERVICES = [
+  { id: 'landing', name: 'Landing', checked: true },
+  { id: 'tienda', name: 'Tienda online', checked: false },
+  { id: 'hotel', name: 'Hotel', checked: false },
+  { id: 'turnos', name: 'Turnos', checked: false },
+  { id: 'entradas', name: 'Entradas', checked: false },
+  { id: 'precios', name: 'Consulta de precios', checked: false },
+  { id: 'qr', name: 'QR Menú', checked: false },
+  { id: 'mp', name: 'Cobro online (MercadoPago)', checked: false, addon: true },
+];
+(() => {
+  const list = document.getElementById('svc-list');
+  const priceEl = document.getElementById('ticket-price');
+  const waBtn = document.getElementById('ticket-wa');
+  const modeBtns = document.querySelectorAll('.mode-toggle button');
+  let mode = 'unico';
+
+  SERVICES.forEach(s => {
+    const row = document.createElement('label');
+    row.className = 'svc-row';
+    row.innerHTML = '<input type="checkbox" data-id="' + s.id + '"' + (s.checked ? ' checked' : '') + '><span>' + s.name + '</span><span class="svc-price" data-price-for="' + s.id + '"></span>';
+    list.appendChild(row);
+  });
+
+  function selected() { return SERVICES.filter(s => list.querySelector('[data-id="' + s.id + '"]').checked); }
+
+  function render() {
+    const chosen = selected();
+    const core = chosen.filter(s => !s.addon);
+    const hasMP = chosen.some(s => s.addon);
+    const unit = mode === 'unico' ? 70 : 8;
+    const mpCost = mode === 'unico' ? 20 : 2;
+    let total = core.length * unit + (hasMP ? mpCost : 0);
+    if (chosen.length === 0) total = 0;
+    list.querySelectorAll('.svc-price').forEach(el => {
+      const id = el.dataset.priceFor;
+      const svc = SERVICES.find(s => s.id === id);
+      el.textContent = svc.addon ? (mode === 'unico' ? '+US$20' : '+US$2/mes') : (mode === 'unico' ? 'US$70' : 'US$8/mes');
     });
+    const label = mode === 'unico' ? 'pago único' : 'por mes';
+    const count = core.length + (hasMP ? ' + MP' : '');
+    priceEl.innerHTML = 'US$' + total + '<span>' + label + ' · ' + core.length + (core.length === 1 ? ' servicio' : ' servicios') + (hasMP ? ' + MP' : '') + '</span>';
+    const names = chosen.map(s => s.name).join(', ') || 'un servicio';
+    const msg = 'Hola Julian, vi Las Flores Software y quiero armar: ' + names + ' (' + label + ', US$' + total + ').';
+    waBtn.href = 'https://wa.me/5492244472255?text=' + encodeURIComponent(msg);
+  }
 
-    ['.service-card', '.example-card', '.price-card'].forEach(sel => {
-      ScrollTrigger.batch(sel, {
-        start: 'top 88%',
-        onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: 'power2.out' })
-      });
-    });
+  list.addEventListener('change', render);
+  modeBtns.forEach(btn => btn.addEventListener('click', () => {
+    mode = btn.dataset.mode;
+    modeBtns.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+    render();
+  }));
+  render();
+})();
 
-    // ── NAV MÓVIL ──
-    const navToggle = document.getElementById('nav-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    function closeMobileMenu() {
-      navToggle.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }
-    navToggle.addEventListener('click', () => {
-      const open = mobileMenu.classList.toggle('open');
-      navToggle.classList.toggle('open', open);
-      navToggle.setAttribute('aria-expanded', String(open));
-    });
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
-
-    // ── BACK TO TOP ──
-    const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('visible', window.scrollY > 600);
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // ── COOKIE BANNER + GA4 ──
-    const GA4_ID = 'G-CGJE92SB7Y';
-    function loadGA4() {
-      if (window.gaLoaded) return;
-      window.gaLoaded = true;
-      const s = document.createElement('script');
-      s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
-      s.async = true;
-      document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ window.dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', GA4_ID);
-      window.gtag = gtag;
-    }
-    const cookieBanner = document.getElementById('cookie-banner');
-    try {
-      const consent = localStorage.getItem('lfs_cookie_consent');
-      if (consent === 'accepted') loadGA4();
-      else if (consent !== 'rejected') cookieBanner.classList.add('visible');
-    } catch (e) { cookieBanner.classList.add('visible'); }
-    document.getElementById('cookie-accept').addEventListener('click', () => {
-      try { localStorage.setItem('lfs_cookie_consent', 'accepted'); } catch (e) {}
-      cookieBanner.classList.remove('visible');
-      loadGA4();
-    });
-    document.getElementById('cookie-reject').addEventListener('click', () => {
-      try { localStorage.setItem('lfs_cookie_consent', 'rejected'); } catch (e) {}
-      cookieBanner.classList.remove('visible');
-    });
-  </script>
+/* ---------- COOKIE BANNER + GA4 ---------- */
+const GA4_ID = 'G-CGJE92SB7Y';
+function loadGA4() {
+  if (window.gaLoaded) return;
+  window.gaLoaded = true;
+  const s = document.createElement('script');
+  s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
+  s.async = true;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ window.dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', GA4_ID);
+  window.gtag = gtag;
+}
+const cookieBanner = document.getElementById('cookie-banner');
+try {
+  const consent = localStorage.getItem('lfs_cookie_consent');
+  if (consent === 'accepted') loadGA4();
+  else if (consent !== 'rejected') cookieBanner.classList.add('visible');
+} catch (e) { cookieBanner.classList.add('visible'); }
+document.getElementById('cookie-accept').addEventListener('click', () => {
+  try { localStorage.setItem('lfs_cookie_consent', 'accepted'); } catch (e) {}
+  cookieBanner.classList.remove('visible');
+  loadGA4();
+});
+document.getElementById('cookie-reject').addEventListener('click', () => {
+  try { localStorage.setItem('lfs_cookie_consent', 'rejected'); } catch (e) {}
+  cookieBanner.classList.remove('visible');
+});
+</script>
 </body>
 </html>
